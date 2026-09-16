@@ -1,359 +1,357 @@
-# Modelos preenchíveis para DSR
+# Fillable DSR templates
 
-Preencha com o que já se sabe do projeto e marque lacunas como **[a definir]**, para ficar claro o
-que falta. Adapte nomes de campos ao idioma e à venue.
+Fill in what is already known about the project and mark gaps as **[to be defined]**, so it is clear
+what is missing. Adapt field names to the language and venue.
 
-## Sumário
-1. Protocolo de pesquisa DSR
-2. Enunciado do problema e classe de problemas
-3. Questões de pesquisa
-4. Tabela de requisitos
-5. Matriz de rastreabilidade
-6. Princípios de design
-7. Regra tecnológica e proposição CIMO
-8. Plano de avaliação (FEDS)
-9. Registro de iterações
-10. Declaração de contribuição
+## Contents
+1. DSR research protocol
+2. Problem statement and class of problems
+3. Research questions
+4. Requirements table
+5. Traceability matrix
+6. Design principles
+7. Technological rule and CIMO proposition
+8. Evaluation plan (FEDS)
+9. Iteration log
+10. Contribution statement
 11. DSR Grid
-12. Canvas de teoria de design
-13. Parecer de revisão DSR
-14. Exemplo completo
+12. Design theory canvas
+13. DSR review report
+14. Complete worked example
 
 ---
 
-## 1. Protocolo de pesquisa DSR
+## 1. DSR research protocol
 
 ```markdown
-# Protocolo DSR — [título provisório]
+# DSR protocol — [working title]
 
-## 1. Identificação
-- Pesquisador(a) / orientador(a):
-- Área e venue(s)-alvo:
-- Versão e data:
+## 1. Identification
+- Researcher / supervisor:
+- Field and target venue(s):
+- Version and date:
 
-## 2. Problema
-- Enunciado (ver §2):
-- Evidências de relevância (fonte → evidência):
-- Stakeholders e interesses:
-- Causas conhecidas ou hipotéticas:
-- Classe de problemas e condições de contorno:
+## 2. Problem
+- Statement (see §2):
+- Evidence of relevance (source → evidence):
+- Stakeholders and interests:
+- Known or hypothesized causes:
+- Class of problems and boundary conditions:
 
-## 3. Questões e objetivos
-- Questão de design:
-- Questões de conhecimento:
-- Objetivo geral:
-- Objetivos específicos (como resultados):
+## 3. Questions and objectives
+- Design question:
+- Knowledge questions:
+- General objective:
+- Specific objectives (as outcomes):
 
-## 4. Base de conhecimento
-- Conhecimento sobre o problema (Ω):
-- Soluções existentes e limitações (Λ), com critérios de comparação:
-- Teorias de base e como serão usadas no design:
+## 4. Knowledge base
+- Knowledge about the problem (Ω):
+- Existing solutions and limitations (Λ), with comparison criteria:
+- Kernel theories and how they will be used in the design:
 
-## 5. Abordagem metodológica
-- Justificativa para DSR:
-- Processo adotado (DSRM, ADR, Wieringa, Dresch et al....) e adaptações:
-- Ponto de entrada:
-- Estratégia de DSR (Iivari: geral → instância ou instância → geral):
-- Mapeamento etapas do processo × entregas × capítulos ou artigos:
+## 5. Methodological approach
+- Justification for DSR:
+- Process adopted (DSRM, ADR, Wieringa, Dresch et al....) and adaptations:
+- Entry point:
+- DSR strategy (Iivari: general → instance or instance → general):
+- Mapping of process steps × deliverables × chapters or papers:
 
-## 6. Requisitos (ver §4)
+## 6. Requirements (see §4)
 
-## 7. Artefato
-- Tipo(s) e artefato principal:
-- Forma de representação:
-- Decisões de design previstas e alternativas a explorar:
-- Princípios de design a priori (se houver):
+## 7. Artifact
+- Type(s) and main artifact:
+- Form of representation:
+- Anticipated design decisions and alternatives to explore:
+- A priori design principles (if any):
 
-## 8. Avaliação (ver §8)
-- Objetivos da avaliação e prioridades:
-- Estratégia FEDS e justificativa:
-- Episódios planejados:
-- Critérios, métricas, comparadores e limiares:
-- Ameaças à validade e mitigação:
+## 8. Evaluation (see §8)
+- Evaluation goals and priorities:
+- FEDS strategy and justification:
+- Planned episodes:
+- Criteria, metrics, comparators, and thresholds:
+- Threats to validity and mitigation:
 
-## 9. Contribuição esperada
-- Quadrante (Gregor & Hevner) e justificativa:
-- Nível(is):
-- Conhecimento de design esperado:
+## 9. Expected contribution
+- Quadrant (Gregor & Hevner) and justification:
+- Level(s):
+- Expected design knowledge:
 
-## 10. Ética e dados
-- Participantes humanos? Apreciação por CEP necessária?
-- Dados pessoais e LGPD:
-- Riscos de uso dual:
-- Acordos com organizações:
+## 10. Ethics and data
+- Human participants? Ethics review required (IRB/REC/CEP)?
+- Personal data and applicable law (GDPR, LGPD, ...):
+- Dual-use risks:
+- Agreements with organizations:
 
-## 11. Cronograma por iterações
-| Iteração | Período | Foco | Episódios de avaliação | Entregas |
+## 11. Schedule by iteration
+| Iteration | Period | Focus | Evaluation episodes | Deliverables |
 |---|---|---|---|---|
 
-## 12. Riscos do projeto
-| Risco | Probabilidade | Impacto | Mitigação ou plano alternativo |
+## 12. Project risks
+| Risk | Likelihood | Impact | Mitigation or fallback plan |
 |---|---|---|---|
 ```
 
 ---
 
-## 2. Enunciado do problema e classe de problemas
+## 2. Problem statement and class of problems
 
-**Problema de design (adaptado de Wieringa, 2014):**
-> Melhorar **[contexto do problema]**
-> por meio de **[(re)projeto de um artefato]**
-> que satisfaça **[requisitos principais]**
-> a fim de **[ajudar stakeholders a alcançar objetivos]**.
+**Design problem (adapted from Wieringa, 2014):**
+> Improve **[problem context]**
+> by **[(re)designing an artifact]**
+> that satisfies **[main requirements]**
+> in order to **[help stakeholders achieve goals]**.
 
-**Enunciado narrativo:**
-> Em **[contexto]**, **[stakeholders]** enfrentam **[problema]**, evidenciado por **[dados ou
-> fontes]**. Isso causa **[consequências]**. As soluções atuais, como **[soluções]**, não resolvem
-> porque **[limitações]**. Falta **[o que falta]**.
+**Narrative statement:**
+> In **[context]**, **[stakeholders]** face **[problem]**, as evidenced by **[data or sources]**. This
+> causes **[consequences]**. Current solutions, such as **[solutions]**, fall short because
+> **[limitations]**. What is missing is **[gap]**.
 
-**Classe de problemas:**
-> Este problema é uma instância da classe **[nome da classe]**: situações em que **[características
-> essenciais compartilhadas]**. Estão fora da classe as situações em que **[exclusões]**.
+**Class of problems:**
+> This problem is an instance of the class **[class name]**: situations in which **[shared essential
+> characteristics]**. Situations in which **[exclusions]** are outside the class.
 
 ---
 
-## 3. Questões de pesquisa
+## 3. Research questions
 
 ```markdown
-QP (design): Como projetar [artefato] para [objetivo] em [contexto]?
-  QC1 (problema):     Quais são as causas de [problema] em [contexto]?
-  QC2 (requisitos):   Que requisitos [artefato] deve satisfazer segundo [fontes]?
-  QC3 (efeito):       Qual o efeito de [artefato] sobre [critério] comparado a [baseline]?
-  QC4 (sensibilidade): Como esse efeito varia com [característica do contexto]?
+RQ (design):          How should [artifact] be designed to [objective] in [context]?
+  KQ1 (problem):      What are the causes of [problem] in [context]?
+  KQ2 (requirements): Which requirements must [artifact] satisfy according to [sources]?
+  KQ3 (effect):       What is the effect of [artifact] on [criterion] compared with [baseline]?
+  KQ4 (sensitivity):  How does that effect vary with [context characteristic]?
 ```
 
 ---
 
-## 4. Tabela de requisitos
+## 4. Requirements table
 
-| ID | Requisito | Tipo | Origem (fonte) | Justificativa ou teoria de base | Prioridade | Critério de verificação |
+| ID | Requirement | Type | Source | Justification or kernel theory | Priority | Verification criterion |
 |---|---|---|---|---|---|---|
-| R1 | | Funcional / qualidade | Entrevista E3; Autor (ano); norma X | | Alta / média / baixa | |
+| R1 | | Functional / quality | Interview I3; Author (year); standard X | | High / medium / low | |
 
-Para contribuições abstratas, acrescente uma coluna **Meta-requisito** (versão em nível de classe).
+For abstract contributions, add a **Meta-requirement** column (class-level version).
 
 ---
 
-## 5. Matriz de rastreabilidade
+## 5. Traceability matrix
 
-| Aspecto do problema | Requisito | Princípio ou decisão de design | Componente do artefato | Critério | Episódio e método | Evidência | Atendido? |
+| Problem aspect | Requirement | Design principle or decision | Artifact component | Criterion | Episode and method | Evidence | Met? |
 |---|---|---|---|---|---|---|---|
-| P1 | R1 | DP1 | C2 | Eficácia | E2 — benchmark | Tabela 5 | Sim / parcial / não |
+| P1 | R1 | DP1 | C2 | Efficacy | E2 — benchmark | Table 5 | Yes / partly / no |
 
-Linhas com células vazias indicam lacunas a tratar antes de escrever os resultados.
+Rows with empty cells point to gaps to address before writing up the results.
 
 ---
 
-## 6. Princípios de design
+## 6. Design principles
 
-**Forma completa (adaptada de Gregor, Chandra Kruse & Seidel, 2020):**
-> **DP[n] — [nome curto].** Para que **[implementador]** alcance **[objetivo]** para **[usuários]**
-> em **[contexto]**, empregue **[mecanismos]**, executados por **[pessoas ou componentes]**, porque
-> **[justificativa: teoria ou evidência]**.
+**Full form (adapted from Gregor, Chandra Kruse & Seidel, 2020):**
+> **DP[n] — [short name].** For **[implementer]** to achieve **[aim]** for **[users]** in
+> **[context]**, employ **[mechanisms]**, enacted by **[people or components]**, because
+> **[rationale: theory or evidence]**.
 
-**Forma compacta (adaptada de Chandra, Seidel & Gregor, 2015):**
-> **DP[n].** Forneça ao sistema **[propriedade material]** para que **[usuários]** possam **[ação]**,
-> dado que **[condições de contorno]**.
+**Compact form (adapted from Chandra, Seidel & Gregor, 2015):**
+> **DP[n].** Provide the system with **[material property]** so that **[users]** can **[action]**,
+> given that **[boundary conditions]**.
 
-**Ficha de cada princípio:**
-| Campo | Conteúdo |
+**Card for each principle:**
+| Field | Content |
 |---|---|
-| Origem | A priori (requisitos e teoria) ou a posteriori (reflexão sobre avaliação) |
-| Meta-requisitos atendidos | |
-| Justificativa | |
-| Instanciação (características que o materializam) | |
-| Proposição testável | |
-| Evidência obtida | |
-| Condições de contorno | |
+| Origin | A priori (requirements and theory) or a posteriori (reflection on evaluation) |
+| Meta-requirements addressed | |
+| Rationale | |
+| Instantiation (features that embody it) | |
+| Testable proposition | |
+| Evidence obtained | |
+| Boundary conditions | |
 
 ---
 
-## 7. Regra tecnológica e proposição CIMO
+## 7. Technological rule and CIMO proposition
 
-**Regra tecnológica (adaptada de van Aken, 2004):**
-> Para alcançar **[efeito Y]** em **[situação Z]**, aplique algo como **[intervenção X]**.
+**Technological rule (adapted from van Aken, 2004):**
+> To achieve **[effect Y]** in **[situation Z]**, apply something like **[intervention X]**.
 
-**Proposição CIMO (adaptada de Denyer et al., 2008):**
-> Em contextos **[C]**, use intervenções **[I]** para acionar os mecanismos **[M]** e produzir os
-> resultados **[O]**.
+**CIMO proposition (adapted from Denyer et al., 2008):**
+> In contexts **[C]**, use interventions **[I]** to trigger mechanisms **[M]** and produce outcomes
+> **[O]**.
 
 ---
 
-## 8. Plano de avaliação (FEDS)
+## 8. Evaluation plan (FEDS)
 
 ```markdown
-## Objetivos da avaliação
-- Rigor (eficácia / efetividade):
-- Riscos principais (humanos/sociais | técnicos):
-- Ética:
-- Restrições de recursos:
+## Evaluation goals
+- Rigor (efficacy / effectiveness):
+- Main risks (human/social | technical):
+- Ethics:
+- Resource constraints:
 
-## Estratégia
-- Estratégia FEDS: [rápida e simples | risco humano e efetividade | risco técnico e eficácia | puramente técnica]
-- Justificativa:
+## Strategy
+- FEDS strategy: [Quick & Simple | Human Risk & Effectiveness | Technical Risk & Efficacy | Purely Technical]
+- Justification:
 
-## Episódios
+## Episodes
 ```
 
-| # | Momento | Propósito | Paradigma | Objeto avaliado | Critérios | Método | Participantes ou dados | Comparador | Limiar de sucesso | Iteração |
+| # | Timing | Purpose | Paradigm | Evaluand | Criteria | Method | Participants or data | Comparator | Success threshold | Iteration |
 |---|---|---|---|---|---|---|---|---|---|---|
-| E1 | Ex ante | Formativo | Artificial | Requisitos e design | Completude, viabilidade | Especialistas | 5 especialistas externos | — | Críticas tratadas | 1 |
-| E2 | Ex post | Somativo | Artificial | Protótipo | Eficácia | Benchmark | Base histórica | Baseline X | ≥ baseline | 2 |
+| E1 | Ex ante | Formative | Artificial | Requirements and design | Completeness, feasibility | Experts | 5 external experts | — | Criticisms addressed | 1 |
+| E2 | Ex post | Summative | Artificial | Prototype | Efficacy | Benchmark | Historical data | Baseline X | ≥ baseline | 2 |
 
-Depois, descreva cada episódio: procedimento, instrumentos, análise, ameaças e mitigação.
+Then describe each episode: procedure, instruments, analysis, threats, and mitigation.
 
 ---
 
-## 9. Registro de iterações
+## 9. Iteration log
 
-| Iteração | Datas | O que foi construído ou alterado | Episódio(s) | Principais achados | Decisões e mudanças | Conhecimento gerado |
+| Iteration | Dates | What was built or changed | Episode(s) | Main findings | Decisions and changes | Knowledge generated |
 |---|---|---|---|---|---|---|
 | 1 | | | | | | |
 
-Mantenha o registro durante o projeto; reconstruí-lo depois tende a apagar exatamente as
-alternativas descartadas e os resultados negativos que demonstram a busca.
+Keep the log during the project; reconstructing it afterwards tends to erase exactly the discarded
+alternatives and negative results that demonstrate the search process.
 
 ---
 
-## 10. Declaração de contribuição
+## 10. Contribution statement
 
 ```markdown
-Artefato principal: [nome] — [tipo]
-Classe de problemas: [classe] — condições de contorno: [condições]
-Novidade: em relação a [soluções], o artefato [diferença essencial]
-Evidência: [estratégia] — [resultado principal vs. baseline]
-Conhecimento de design: [princípios, regras, entendimento do problema]
-Posicionamento: [quadrante], porque domínio [maduro/pouco maduro: evidência] e solução [madura/pouco madura: evidência]
-Níveis: [1 / 2 / 3] — [o que corresponde a cada nível]
-Implicações para pesquisa:
-Implicações para prática:
+Main artifact: [name] — [type]
+Class of problems: [class] — boundary conditions: [conditions]
+Novelty: relative to [solutions], the artifact [essential difference]
+Evidence: [strategy] — [main result vs. baseline]
+Design knowledge: [principles, rules, understanding of the problem]
+Positioning: [quadrant], because the domain is [mature/immature: evidence] and the solution is [mature/immature: evidence]
+Levels: [1 / 2 / 3] — [what corresponds to each level]
+Implications for research:
+Implications for practice:
 ```
 
 ---
 
 ## 11. DSR Grid (vom Brocke & Maedche, 2019)
 
-| Problema | Conhecimento de entrada | Processo de pesquisa |
+| Problem | Input knowledge | Research process |
 |---|---|---|
-| Qual problema, para quem, com que evidência? | Que teorias, métodos e artefatos foram usados? | Que atividades e iterações, com quais métodos? |
-| **Conceitos-chave** | **Solução** | **Conhecimento de saída** |
-| Quais conceitos definem o espaço do problema e da solução? | Que artefato foi construído e como funciona? | Que conhecimento de design e que evidências foram produzidos? |
+| Which problem, for whom, with what evidence? | Which theories, methods, and artifacts were used? | Which activities and iterations, with which methods? |
+| **Key concepts** | **Solution** | **Output knowledge** |
+| Which concepts define the problem and solution space? | What artifact was built and how does it work? | What design knowledge and evidence were produced? |
 
 ---
 
-## 12. Canvas de teoria de design (Gregor & Jones, 2007)
+## 12. Design theory canvas (Gregor & Jones, 2007)
 
-| Componente | Conteúdo |
+| Component | Content |
 |---|---|
-| 1. Propósito e escopo | |
-| 2. Construtos | |
-| 3. Princípios de forma e função | |
-| 4. Mutabilidade do artefato | |
-| 5. Proposições testáveis | |
-| 6. Conhecimento justificatório | |
-| 7. Princípios de implementação (opcional) | |
-| 8. Instanciação expositiva (opcional) | |
+| 1. Purpose and scope | |
+| 2. Constructs | |
+| 3. Principles of form and function | |
+| 4. Artifact mutability | |
+| 5. Testable propositions | |
+| 6. Justificatory knowledge | |
+| 7. Principles of implementation (optional) | |
+| 8. Expository instantiation (optional) | |
 
 ---
 
-## 13. Parecer de revisão DSR
+## 13. DSR review report
 
 ```markdown
-# Parecer — [título do manuscrito]
+# Review — [manuscript title]
 
-## 1. Síntese do trabalho
-Problema, artefato, abordagem, avaliação e contribuição declarada, em 5–8 linhas e nas palavras do revisor.
+## 1. Summary of the work
+Problem, artifact, approach, evaluation, and claimed contribution, in 5–8 lines and in the reviewer's own words.
 
-## 2. Enquadramento DSR
-O trabalho é DSR? O processo declarado corresponde ao seguido?
+## 2. DSR framing
+Is the work DSR? Does the declared process match the one followed?
 
-## 3. Pontos fortes
+## 3. Strengths
 
-## 4. Avaliação por dimensão (R1–R10)
-Para cada dimensão: avaliação curta e achados com localização.
+## 4. Assessment by dimension (R1–R10)
+For each dimension: a short assessment and findings with locations.
 
-## 5. Achados críticos
-[C1] Descrição — localização — por que é crítico — o que seria necessário
+## 5. Critical findings
+[C1] Description — location — why it is critical — what would be needed
 
-## 6. Achados importantes
-[I1] ...
-
-## 7. Achados menores
+## 6. Major findings
 [M1] ...
 
-## 8. Verificação de citações de DSR
-Atribuições incorretas ou metadados inconsistentes.
+## 7. Minor findings
+[m1] ...
 
-## 9. Recomendação
-Aceitar | Revisão menor | Revisão maior | Rejeitar — com justificativa ligada aos achados.
+## 8. DSR citation check
+Incorrect attributions or inconsistent metadata.
 
-## 10. Sugestões construtivas
-Caminhos concretos e priorizados para fortalecer o trabalho.
+## 9. Recommendation
+Accept | Minor revision | Major revision | Reject — with a justification tied to the findings.
+
+## 10. Constructive suggestions
+Concrete, prioritized ways to strengthen the work.
 ```
 
 ---
 
-## 14. Exemplo completo (ilustrativo)
+## 14. Complete worked example (illustrative)
 
-Exemplo fictício para mostrar a cadeia completa; números e resultados são ilustrativos. Em um
-trabalho real, cada teoria de base citada precisa de referência verificada.
+A fictitious example showing the full chain; numbers and results are illustrative. In real work,
+every kernel theory cited needs a verified reference.
 
-**Contexto.** Centros de operações de segurança (SOC) de porte médio recebem milhares de alertas
-por dia; analistas gastam a maior parte do turno em triagem, e incidentes críticos se perdem entre
-falsos positivos.
+**Context.** Mid-sized security operations centers (SOCs) receive thousands of alerts per day;
+analysts spend most of their shift on triage, and critical incidents get lost among false positives.
 
-**Problema de design.** Melhorar a triagem de alertas em SOCs de porte médio por meio de um método
-de priorização explicável e de uma ferramenta que o implementa, que reduza o tempo de triagem sem
-aumentar incidentes críticos perdidos, a fim de ajudar analistas e gestores a concentrar esforço
-nos alertas relevantes.
+**Design problem.** Improve alert triage in mid-sized SOCs by means of an explainable prioritization
+method and a tool implementing it, which reduces triage time without increasing missed critical
+incidents, in order to help analysts and managers focus effort on relevant alerts.
 
-**Classe de problemas.** Triagem de grandes volumes de alertas heterogêneos por equipes pequenas,
-sob responsabilidade humana pela decisão final. Fora da classe: resposta totalmente automatizada.
+**Class of problems.** Triage of large volumes of heterogeneous alerts by small teams, with humans
+accountable for the final decision. Outside the class: fully automated response.
 
-**Questões.**
-- QP: Como projetar um método de priorização de alertas que reduza o esforço de triagem sem
-  aumentar incidentes críticos perdidos em SOCs de porte médio?
-- QC1: Quais fatores levam a incidentes críticos perdidos na triagem atual?
-- QC3: Qual o efeito do método sobre o tempo de triagem e o recall de incidentes críticos em
-  comparação com a ordenação por severidade do SIEM?
+**Questions.**
+- RQ: How should an alert prioritization method be designed to reduce triage effort without
+  increasing missed critical incidents in mid-sized SOCs?
+- KQ1: Which factors lead to missed critical incidents in current triage?
+- KQ3: What is the method's effect on triage time and on recall of critical incidents compared with
+  SIEM severity ordering?
 
-**Requisitos.**
-| ID | Requisito | Origem |
+**Requirements.**
+| ID | Requirement | Source |
 |---|---|---|
-| R1 | Reduzir o tempo médio de triagem em relação ao processo atual | Entrevistas com gestores; métricas do SOC |
-| R2 | Não reduzir o recall de incidentes críticos | Entrevistas; política do SOC |
-| R3 | Permitir que analistas entendam e contestem cada prioridade | Entrevistas; literatura sobre confiança em automação |
-| R4 | Integrar-se ao SIEM existente sem substituí-lo | Restrição organizacional |
+| R1 | Reduce mean triage time relative to the current process | Manager interviews; SOC metrics |
+| R2 | Do not reduce recall of critical incidents | Interviews; SOC policy |
+| R3 | Let analysts understand and challenge each priority | Interviews; literature on trust in automation |
+| R4 | Integrate with the existing SIEM without replacing it | Organizational constraint |
 
-**Princípios de design.**
-- **DP1 — Justificativa contestável.** Forneça à ferramenta uma justificativa legível dos fatores
-  que determinaram cada prioridade, para que analistas possam contestar prioridades incorretas
-  antes de agir, dado que respondem pela decisão final sob alta carga.
-- **DP2 — Contexto agregado.** Agrupe alertas correlacionados do mesmo ativo em um único item de
-  triagem, para que analistas avaliem incidentes em vez de eventos isolados, dado que ataques
-  geram múltiplos alertas relacionados.
+**Design principles.**
+- **DP1 — Contestable justification.** Provide the tool with a readable justification of the factors
+  behind each priority, so that analysts can challenge incorrect priorities before acting, given that
+  they remain accountable for the final decision under high load.
+- **DP2 — Aggregated context.** Group correlated alerts on the same asset into a single triage item,
+  so that analysts assess incidents rather than isolated events, given that attacks generate multiple
+  related alerts.
 
-**Estratégia de avaliação.** Risco humano e efetividade: o maior risco é analistas não confiarem
-na priorização nem a usarem.
+**Evaluation strategy.** Human Risk & Effectiveness: the biggest risk is that analysts neither trust
+nor use the prioritization.
 
-| # | Momento | Propósito | Paradigma | Método | Comparador | Limiar |
+| # | Timing | Purpose | Paradigm | Method | Comparator | Threshold |
 |---|---|---|---|---|---|---|
-| E1 | Ex ante | Formativo | Artificial | Revisão de requisitos e princípios por 5 especialistas externos | — | Críticas incorporadas |
-| E2 | Ex post | Formativo e somativo | Artificial | Reprocessamento de 6 meses de alertas rotulados; ablação de DP2 | Ordenação do SIEM | Recall ≥ baseline; tempo estimado menor |
-| E3 | Ex post | Formativo | Naturalístico | Piloto de 2 semanas com 4 analistas; logs e entrevistas | — | Problemas de uso identificados e tratados |
-| E4 | Ex post | Somativo | Naturalístico | Uso por 8 semanas; antes e depois; entrevistas | Período anterior | Tempo menor; sem aumento de críticos perdidos |
+| E1 | Ex ante | Formative | Artificial | Review of requirements and principles by 5 external experts | — | Criticisms incorporated |
+| E2 | Ex post | Formative and summative | Artificial | Replay of 6 months of labeled alerts; ablation of DP2 | SIEM ordering | Recall ≥ baseline; lower estimated time |
+| E3 | Ex post | Formative | Naturalistic | 2-week pilot with 4 analysts; logs and interviews | — | Usage problems identified and addressed |
+| E4 | Ex post | Summative | Naturalistic | 8 weeks of use; before and after; interviews | Prior period | Lower time; no increase in missed critical incidents |
 
-**Rastreabilidade (trecho).**
-| Problema | Requisito | Princípio | Componente | Critério | Episódio | Evidência |
+**Traceability (excerpt).**
+| Problem | Requirement | Principle | Component | Criterion | Episode | Evidence |
 |---|---|---|---|---|---|---|
-| Críticos perdidos no ruído | R2 | DP2 | Agrupador de alertas | Eficácia (recall) | E2, E4 | Tabelas de resultados |
-| Desconfiança em automação | R3 | DP1 | Painel de justificativa | Compreensibilidade; uso | E3, E4 | Logs de contestação; entrevistas |
+| Critical incidents lost in noise | R2 | DP2 | Alert grouper | Efficacy (recall) | E2, E4 | Results tables |
+| Distrust of automation | R3 | DP1 | Justification panel | Understandability; use | E3, E4 | Challenge logs; interviews |
 
-**Contribuição.** Melhoria (problema conhecido e bem documentado; solução nova na combinação de
-priorização explicável e agregação por ativo), com contribuição de nível 1 (ferramenta avaliada) e
-nível 2 (DP1 e DP2 com condições de contorno).
+**Contribution.** Improvement (a known, well-documented problem; a new solution in combining
+explainable prioritization with per-asset aggregation), with a level 1 contribution (evaluated tool)
+and a level 2 contribution (DP1 and DP2 with boundary conditions).
 
-**Ameaças principais.** Validade de instanciação (efeitos da interface e não dos princípios —
-mitigada pela ablação em E2); viés do pesquisador-projetista (métricas extraídas de logs e limiares
-fixados antes); validade externa (um SOC — discutida pelas condições de contorno e pela explicação
-dos mecanismos).
+**Main threats.** Instantiation validity (effects due to the interface rather than the principles —
+mitigated by the ablation in E2); designer-researcher bias (metrics extracted from logs and thresholds
+fixed in advance); external validity (a single SOC — addressed through boundary conditions and a
+mechanism-based explanation).

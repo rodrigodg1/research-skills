@@ -1,19 +1,19 @@
 # research-skills
 
-Skills do Claude para pesquisa acadêmica. O repositório segue o layout de *plugin marketplace*
-(`.claude-plugin/marketplace.json`) e mantém cada skill em `skills/<nome>/`, então pode ser
-importado tanto como marketplace quanto como repositório de skills.
+Claude skills for academic research. The repository follows the *plugin marketplace* layout
+(`.claude-plugin/marketplace.json`) and keeps each skill in `skills/<name>/`, so it can be imported
+either as a marketplace or as a skills repository.
 
 ## Skills
 
-| Skill | Descrição |
+| Skill | Description |
 |---|---|
-| [`design-science-research`](skills/design-science-research/SKILL.md) | Especialista em Design Science Research: enquadramento, protocolo, processos (DSRM, três ciclos, ADR, Wieringa, Dresch et al.), requisitos, princípios e teorias de design, contribuição (Gregor & Hevner), avaliação (FEDS, EVAL1–4, critérios de Prat et al.), estrutura de artigos e teses, revisão de manuscritos e resposta a revisores. |
+| [`design-science-research`](skills/design-science-research/SKILL.md) | Design Science Research expert: framing, research protocol, processes (DSRM, three cycles, ADR, Wieringa, Dresch et al.), requirements, design principles and theories, contribution positioning (Gregor & Hevner), evaluation (FEDS, EVAL1–4, Prat et al. criteria), paper and thesis structure, manuscript review, and responses to reviewers. |
 
-## Como importar
+## How to import
 
-### Claude (app desktop ou web)
-**Skills → Import from GitHub**, informe `rodrigodg1/research-skills` e clique em **Preview**.
+### Claude (desktop or web app)
+**Skills → Import from GitHub**, enter `rodrigodg1/research-skills`, and click **Preview**.
 
 ### Claude Code
 ```
@@ -21,16 +21,16 @@ importado tanto como marketplace quanto como repositório de skills.
 /plugin install design-science-research@research-skills
 ```
 
-## Estrutura
+## Structure
 
 ```
 research-skills/
 ├── .claude-plugin/
-│   └── marketplace.json          # catálogo de plugins (um por skill)
+│   └── marketplace.json          # plugin catalog (one plugin per skill)
 └── skills/
     └── design-science-research/
-        ├── SKILL.md              # instruções principais (carregadas quando a skill é acionada)
-        └── references/           # material detalhado, lido sob demanda
+        ├── SKILL.md              # main instructions (loaded when the skill triggers)
+        └── references/           # detailed material, read on demand
             ├── frameworks.md
             ├── contributions-and-theory.md
             ├── evaluation.md
@@ -40,24 +40,24 @@ research-skills/
             └── glossary.md
 ```
 
-## Como adicionar uma nova skill
+## Adding a new skill
 
-1. Crie `skills/<nome-da-skill>/SKILL.md` com frontmatter YAML:
+1. Create `skills/<skill-name>/SKILL.md` with YAML frontmatter:
    ```yaml
    ---
-   name: nome-da-skill          # minúsculas e hífens; igual ao nome da pasta
-   description: O que a skill faz e quando deve ser usada.
+   name: skill-name             # lowercase and hyphens; same as the folder name
+   description: What the skill does and when it should be used.
    ---
    ```
-2. Coloque material extenso em `skills/<nome-da-skill>/references/` e aponte para ele no `SKILL.md`.
-3. Adicione uma entrada em `.claude-plugin/marketplace.json`:
+2. Put lengthy material in `skills/<skill-name>/references/` and point to it from `SKILL.md`.
+3. Add an entry to `.claude-plugin/marketplace.json`:
    ```json
    {
-     "name": "nome-da-skill",
+     "name": "skill-name",
      "description": "…",
      "source": "./",
      "strict": false,
-     "skills": ["./skills/nome-da-skill"]
+     "skills": ["./skills/skill-name"]
    }
    ```
-4. Atualize a tabela de skills deste README.
+4. Update the skills table in this README.

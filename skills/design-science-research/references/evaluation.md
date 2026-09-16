@@ -1,342 +1,340 @@
-# Avaliação em DSR
+# Evaluation in DSR
 
-A avaliação é onde projetos DSR mais perdem credibilidade. Uma boa avaliação responde a três
-perguntas: **o artefato produz o efeito pretendido?** (eficácia), **produz esse efeito em
-situações reais?** (efetividade) e **por que produz?** (mecanismo). E responde com critérios
-derivados dos requisitos, fixados antes de olhar os resultados.
+Evaluation is where DSR projects most often lose credibility. A good evaluation answers three
+questions: **does the artifact produce the intended effect?** (efficacy), **does it produce that
+effect in real situations?** (effectiveness), and **why does it produce it?** (mechanism). It answers
+them with criteria derived from the requirements and fixed before looking at the results.
 
-## Sumário
-1. Métodos de avaliação de Hevner et al. (2004)
-2. Tipos de método observados (Peffers et al., 2012)
-3. Ex ante e ex post; artificial e naturalística
+## Contents
+1. Evaluation methods from Hevner et al. (2004)
+2. Observed method types (Peffers et al., 2012)
+3. Ex ante and ex post; artificial and naturalistic
 4. FEDS (Venable et al., 2016)
 5. EVAL1–EVAL4 (Sonnenberg & vom Brocke, 2012)
-6. Hierarquia de critérios (Prat et al., 2015)
-7. Do requisito ao critério e à métrica
-8. Avaliação por tipo de artefato
-9. Fichas de métodos
-10. Ameaças à validade
-11. Ética
-12. Checklist do plano de avaliação
+6. Hierarchy of criteria (Prat et al., 2015)
+7. From requirement to criterion and metric
+8. Evaluation by artifact type
+9. Method cards
+10. Threats to validity
+11. Ethics
+12. Evaluation plan checklist
 
 ---
 
-## 1. Métodos de avaliação de Hevner et al. (2004)
+## 1. Evaluation methods from Hevner et al. (2004)
 
-| Categoria | Método | Descrição (paráfrase) |
+| Category | Method | Description (paraphrase) |
 |---|---|---|
-| Observacional | Estudo de caso | Estudar o artefato em profundidade no ambiente de negócio |
-| | Estudo de campo | Monitorar o uso do artefato em múltiplos projetos |
-| Analítico | Análise estática | Examinar a estrutura do artefato quanto a qualidades estáticas (p. ex., complexidade) |
-| | Análise de arquitetura | Estudar o encaixe do artefato na arquitetura técnica |
-| | Otimização | Demonstrar propriedades ótimas ou limites de otimalidade do comportamento |
-| | Análise dinâmica | Estudar o artefato em uso quanto a qualidades dinâmicas (p. ex., desempenho) |
-| Experimental | Experimento controlado | Estudar o artefato em ambiente controlado (p. ex., usabilidade) |
-| | Simulação | Executar o artefato com dados artificiais |
-| Teste | Funcional (caixa-preta) | Executar interfaces do artefato para descobrir falhas |
-| | Estrutural (caixa-branca) | Testes de cobertura de alguma métrica da implementação |
-| Descritivo | Argumento informado | Usar a base de conhecimento para construir argumento convincente de utilidade |
-| | Cenários | Construir cenários detalhados em torno do artefato para demonstrar utilidade |
+| Observational | Case study | Study the artifact in depth in the business environment |
+| | Field study | Monitor use of the artifact in multiple projects |
+| Analytical | Static analysis | Examine the artifact's structure for static qualities (e.g., complexity) |
+| | Architecture analysis | Study the artifact's fit into the technical architecture |
+| | Optimization | Demonstrate optimal properties or provide optimality bounds on behavior |
+| | Dynamic analysis | Study the artifact in use for dynamic qualities (e.g., performance) |
+| Experimental | Controlled experiment | Study the artifact in a controlled environment (e.g., usability) |
+| | Simulation | Execute the artifact with artificial data |
+| Testing | Functional (black box) | Execute the artifact's interfaces to discover failures |
+| | Structural (white box) | Coverage testing of some metric of the implementation |
+| Descriptive | Informed argument | Use the knowledge base to build a convincing argument for utility |
+| | Scenarios | Build detailed scenarios around the artifact to demonstrate utility |
 
-Os autores reservam os métodos descritivos para artefatos especialmente inovadores, quando outras
-formas de avaliação não são viáveis. Em teses, métodos descritivos isolados costumam ser
-considerados fracos.
-
----
-
-## 2. Tipos de método observados (Peffers et al., 2012)
-
-Ao analisar artigos de DSR, Peffers et al. (2012) identificaram tipos recorrentes de avaliação:
-argumento lógico, avaliação por especialistas, experimento técnico, experimento com sujeitos,
-pesquisa-ação, protótipo, cenário ilustrativo e estudo de caso. Os tipos se associam a tipos de
-artefato — por exemplo, algoritmos tendem a experimentos técnicos, e modelos e métodos a
-cenários, casos ou especialistas. Use essa lista para verificar se o método escolhido é usual
-para o tipo de artefato e, se não for, justificar.
+The authors reserve descriptive methods for especially innovative artifacts, when other forms of
+evaluation are not feasible. In theses, descriptive methods alone are usually considered weak.
 
 ---
 
-## 3. Ex ante e ex post; artificial e naturalística
+## 2. Observed method types (Peffers et al., 2012)
 
-Pries-Heje et al. (2008) e Venable et al. (2012) organizam a avaliação em duas distinções:
+Analyzing DSR papers, Peffers et al. (2012) identified recurring evaluation types: logical argument,
+expert evaluation, technical experiment, subject-based experiment, action research, prototype,
+illustrative scenario, and case study. These types are associated with artifact types — for example,
+algorithms tend toward technical experiments, and models and methods toward scenarios, cases, or
+experts. Use the list to check whether the chosen method is usual for the artifact type and, if not,
+to justify it.
 
-**Quando:**
-- **Ex ante** — antes de construir ou instanciar: avalia o design, a especificação, os requisitos.
-  Barato; reduz risco cedo; não mostra desempenho real.
-- **Ex post** — depois de instanciar: avalia o artefato construído.
+---
 
-**Onde:**
-- **Artificial** — algum elemento não é real (usuários, sistema ou problema): experimentos de
-  laboratório, simulações, análise por critérios, argumentos teóricos, provas.
-  Controle e reprodutibilidade altos; realismo baixo.
-- **Naturalística** — pessoas reais, sistemas reais, problemas reais: estudos de caso, estudos de
-  campo, pesquisa-ação, surveys. Realismo alto; custo, risco e confundidores também.
+## 3. Ex ante and ex post; artificial and naturalistic
 
-| | Artificial | Naturalística |
+Pries-Heje et al. (2008) and Venable et al. (2012) organize evaluation along two distinctions:
+
+**When:**
+- **Ex ante** — before building or instantiating: evaluates the design, specification, or
+  requirements. Cheap; reduces risk early; does not show real performance.
+- **Ex post** — after instantiating: evaluates the built artifact.
+
+**Where:**
+- **Artificial** — some element is not real (users, system, or problem): lab experiments,
+  simulations, criteria-based analysis, theoretical arguments, proofs. High control and
+  reproducibility; low realism.
+- **Naturalistic** — real people, real systems, real problems: case studies, field studies, action
+  research, surveys. High realism; high cost, risk, and confounds too.
+
+| | Artificial | Naturalistic |
 |---|---|---|
-| **Ex ante** | Avaliação de especificação por critérios; prova sobre o modelo; revisão por especialistas em laboratório | Grupo focal com praticantes sobre o design; avaliação do design pela organização-alvo |
-| **Ex post** | Benchmark; simulação; experimento controlado com protótipo | Implantação piloto; estudo de caso; pesquisa-ação |
+| **Ex ante** | Criteria-based evaluation of the specification; proof on the model; expert review in a lab setting | Focus group with practitioners on the design; design assessment by the target organization |
+| **Ex post** | Benchmark; simulation; controlled experiment with a prototype | Pilot deployment; case study; action research |
 
-Exemplos ilustrativos, não uma classificação oficial.
+Illustrative examples, not an official classification.
 
 ---
 
 ## 4. FEDS — Framework for Evaluation in Design Science (Venable et al., 2016)
 
-### Duas dimensões
-- **Propósito funcional:** *formativa* (produzir melhorias; avaliação ao longo do design) →
-  *somativa* (julgar o resultado; atribuir significado aos efeitos).
-- **Paradigma:** *artificial* → *naturalística*.
+### Two dimensions
+- **Functional purpose:** *formative* (produce improvements; evaluation during design) → *summative*
+  (judge the outcome; assign meaning to effects).
+- **Paradigm:** *artificial* → *naturalistic*.
 
-Cada **episódio** de avaliação é um ponto nesse plano. A sequência de episódios forma a
-**trajetória** da avaliação.
+Each evaluation **episode** is a point in this plane. The sequence of episodes forms the evaluation
+**trajectory**.
 
-### Objetivos que o desenho de avaliação equilibra
-1. **Rigor** — mostrar que a melhoria se deve ao artefato (*eficácia*) e que ele funciona em
-   situações reais (*efetividade*).
-2. **Redução de incerteza e risco** — riscos humanos e sociais (o artefato será usado? aceito?) e
-   riscos técnicos (vai funcionar? escalar?).
-3. **Ética** — riscos para pessoas, organizações e sociedade, inclusive durante a avaliação.
-4. **Eficiência** — equilibrar os objetivos acima com os recursos disponíveis.
+### Goals the evaluation design balances
+1. **Rigor** — show that the improvement is due to the artifact (*efficacy*) and that it works in
+   real situations (*effectiveness*).
+2. **Uncertainty and risk reduction** — human and social risks (will it be used? accepted?) and
+   technical risks (will it work? scale?).
+3. **Ethics** — risks to people, organizations, and society, including during evaluation.
+4. **Efficiency** — balance the goals above against available resources.
 
-### Quatro estratégias
-| Estratégia | Trajetória | Quando escolher |
+### Four strategies
+| Strategy | Trajectory | When to choose |
 |---|---|---|
-| **Rápida e simples** | Poucos episódios; vai cedo para somativa naturalística | Design pequeno e simples; baixo risco social e técnico |
-| **Risco humano e efetividade** | Formativas artificiais cedo; logo formativas naturalísticas; termina em somativas naturalísticas | Principal risco é social ou do usuário; objetivo é mostrar que a utilidade se mantém em situações reais e no longo prazo |
-| **Risco técnico e eficácia** | Formativas artificiais; somativas artificiais; naturalística só no final | Principal risco é técnico; avaliar com usuários reais é caro demais; objetivo é mostrar com rigor que o benefício vem do artefato |
-| **Puramente técnica** | Somativas artificiais | Artefato sem usuários humanos, ou uso real previsto só para muito depois |
+| **Quick & Simple** | Few episodes; moves early to summative naturalistic | Small, simple design; low social and technical risk |
+| **Human Risk & Effectiveness** | Early formative artificial; soon formative naturalistic; ends in summative naturalistic | Main risk is social or user-oriented; goal is to show utility holds in real situations and over time |
+| **Technical Risk & Efficacy** | Formative artificial; summative artificial; naturalistic only at the end | Main risk is technical; evaluating with real users is too costly; goal is to show rigorously that the benefit comes from the artifact |
+| **Purely Technical** | Summative artificial | Artifact without human users, or real use planned only far in the future |
 
-### Quatro passos
-1. **Explicitar os objetivos da avaliação** (rigor, risco, ética, eficiência) e suas prioridades.
-2. **Escolher a estratégia** (ou combinação) de acordo com os riscos e os objetivos.
-3. **Determinar as propriedades a avaliar** — derivadas de requisitos, objetivos e proposições.
-4. **Projetar os episódios individuais** — considerando restrições de tempo, dinheiro, acesso a
-   pessoas e organizações; definindo quantos episódios, quando, com que método e com que dados.
+### Four steps
+1. **Explicate the goals of the evaluation** (rigor, risk, ethics, efficiency) and their priorities.
+2. **Choose the strategy** (or a combination) according to risks and goals.
+3. **Determine the properties to evaluate** — derived from requirements, objectives, and
+   propositions.
+4. **Design the individual episodes** — considering constraints of time, money, and access to people
+   and organizations; deciding how many episodes, when, with which method, and with which data.
 
-### Aplicação em computação e segurança
-Artefatos técnicos (protocolos, algoritmos, arquiteturas) geralmente seguem **risco técnico e
-eficácia** ou **puramente técnica**: análise formal e benchmarks primeiro, e estudo com operadores
-ou implantação piloto no final, se o artefato tiver usuários. Se o sucesso depende de pessoas
-adotarem ou confiarem no artefato (ferramentas para analistas, interfaces de privacidade), o
-risco humano domina e a estratégia muda.
+### Application in computer science and security
+Technical artifacts (protocols, algorithms, architectures) usually follow **Technical Risk &
+Efficacy** or **Purely Technical**: formal analysis and benchmarks first, and a study with operators
+or a pilot deployment at the end, if the artifact has users. If success depends on people adopting or
+trusting the artifact (tools for analysts, privacy interfaces), human risk dominates and the strategy
+changes.
 
-Modelo de plano em `templates.md` §8.
+Plan template in `templates.md` §8.
 
 ---
 
 ## 5. EVAL1–EVAL4 (Sonnenberg & vom Brocke, 2012)
 
-Propõem avaliar ao longo de todo o processo, não só no fim, com quatro tipos de episódio ligados às
-atividades de design. Critérios e métodos abaixo são exemplos típicos.
+They propose evaluating throughout the process, not only at the end, with four episode types tied to
+design activities. The criteria and methods below are typical examples.
 
-| Episódio | Momento | O que valida | Critérios típicos | Métodos típicos |
+| Episode | Timing | What it validates | Typical criteria | Typical methods |
 |---|---|---|---|---|
-| **EVAL1** | Ex ante, após identificar o problema | Enunciado do problema e lacuna de pesquisa justificados | Importância, novidade, viabilidade | Revisão de literatura, entrevistas com especialistas, grupos focais |
-| **EVAL2** | Ex ante, após o projeto | Especificação de design validada | Clareza, completude, consistência, viabilidade | Especialistas, grupos focais, argumento lógico |
-| **EVAL3** | Ex post, após a construção | Instanciação validada em ambiente artificial | Viabilidade, eficácia, eficiência, facilidade de uso | Demonstração com protótipo, experimento, simulação, benchmark |
-| **EVAL4** | Ex post, após o uso | Artefato validado em uso naturalístico | Aplicabilidade, efetividade, impacto, adequação ao contexto | Estudo de caso, experimento de campo, survey, entrevistas |
+| **EVAL1** | Ex ante, after problem identification | Justified problem statement and research gap | Importance, novelty, feasibility | Literature review, expert interviews, focus groups |
+| **EVAL2** | Ex ante, after design | Validated design specification | Clarity, completeness, consistency, feasibility | Experts, focus groups, logical argument |
+| **EVAL3** | Ex post, after construction | Instantiation validated in an artificial setting | Feasibility, efficacy, efficiency, ease of use | Prototype demonstration, experiment, simulation, benchmark |
+| **EVAL4** | Ex post, after use | Artifact validated in naturalistic use | Applicability, effectiveness, impact, fit with context | Case study, field experiment, survey, interviews |
 
-Útil para mostrar à banca que a avaliação começou antes do protótipo.
+Useful to show a committee that evaluation started before the prototype.
 
 ---
 
-## 6. Hierarquia de critérios (Prat et al., 2015)
+## 6. Hierarchy of criteria (Prat et al., 2015)
 
-Critérios organizados pelas dimensões de um sistema. Use como catálogo para não esquecer
-critérios relevantes, não para avaliar tudo.
+Criteria organized by the dimensions of a system. Use it as a catalog so relevant criteria are not
+forgotten, not as a list to evaluate exhaustively.
 
-| Dimensão | Critérios |
+| Dimension | Criteria |
 |---|---|
-| **Objetivo** | Eficácia; validade (o artefato funciona corretamente e faz o que deve); generalidade |
-| **Ambiente — pessoas** | Utilidade; compreensibilidade; facilidade de uso; eticidade; efeitos colaterais |
-| **Ambiente — organização** | Utilidade; adequação à organização; efeitos colaterais |
-| **Ambiente — tecnologia** | Harmonização com outras tecnologias; viabilidade; efeitos colaterais |
-| **Estrutura** | Completude; simplicidade; clareza; estilo; homomorfismo (correspondência com outro modelo; fidelidade ao fenômeno modelado); nível de detalhe; consistência |
-| **Atividade** | Completude; consistência; acurácia; desempenho; eficiência |
-| **Evolução** | Robustez; capacidade de aprendizado |
+| **Goal** | Efficacy; validity (the artifact works correctly and does what it should); generality |
+| **Environment — people** | Utility; understandability; ease of use; ethicality; side effects |
+| **Environment — organization** | Utility; fit with organization; side effects |
+| **Environment — technology** | Harmonization with other technologies; feasibility; side effects |
+| **Structure** | Completeness; simplicity; clarity; style; homomorphism (correspondence with another model; fidelity to the modeled phenomenon); level of detail; consistency |
+| **Activity** | Completeness; consistency; accuracy; performance; efficiency |
+| **Evolution** | Robustness; learning capability |
 
 ---
 
-## 7. Do requisito ao critério e à métrica
+## 7. From requirement to criterion and metric
 
-Para cada requisito, defina **antes** da avaliação:
+For each requirement, define **before** the evaluation:
 
-| Elemento | Pergunta | Exemplo |
+| Element | Question | Example |
 |---|---|---|
-| Requisito | O que o artefato precisa garantir? | R2 — não aumentar incidentes críticos perdidos |
-| Critério | Que propriedade observa isso? | Eficácia (Prat: objetivo) |
-| Pergunta | O que queremos saber? | A priorização perde mais incidentes críticos que o processo atual? |
-| Métrica | Como medir? | Recall de incidentes críticos no top-k |
-| Fonte de dados | De onde vêm os dados? | Base histórica rotulada de 6 meses |
-| Comparador | Contra o quê? | Ordenação por severidade do SIEM (baseline) |
-| Limiar de sucesso | O que conta como atender? | Recall ≥ baseline, com intervalo de confiança reportado |
-| Episódio | Onde se mede? | E2 — artificial, somativo |
+| Requirement | What must the artifact ensure? | R2 — do not increase missed critical incidents |
+| Criterion | Which property observes it? | Efficacy (Prat: goal) |
+| Question | What do we want to know? | Does prioritization miss more critical incidents than the current process? |
+| Metric | How is it measured? | Recall of critical incidents in the top-k |
+| Data source | Where do the data come from? | Six months of labeled historical data |
+| Comparator | Against what? | SIEM severity ordering (baseline) |
+| Success threshold | What counts as meeting it? | Recall ≥ baseline, with confidence interval reported |
+| Episode | Where is it measured? | E2 — artificial, summative |
 
-Fixar limiares e comparadores antes evita o ajuste posterior de critérios aos resultados — uma
-das críticas mais graves em avaliações DSR. Se algo mudou durante o projeto, relate a mudança e o
-motivo.
+Fixing thresholds and comparators in advance prevents adjusting criteria to results after the fact —
+one of the most serious criticisms of DSR evaluations. If something changed during the project,
+report the change and the reason.
 
 ---
 
-## 8. Avaliação por tipo de artefato
+## 8. Evaluation by artifact type
 
-Síntese orientadora; adapte ao caso.
+Guiding synthesis; adapt to the case.
 
-| Artefato | Critérios centrais | Métodos usuais | Observações |
+| Artifact | Core criteria | Usual methods | Notes |
 |---|---|---|---|
-| **Construto** (taxonomia, ontologia, conceitos) | Completude, clareza, consistência, utilidade para classificar ou comunicar | Especialistas; aplicação a casos reais; comparação com esquemas existentes; testes de concordância entre avaliadores | Mostre que alguém consegue usar os construtos, não só que estão bem definidos |
-| **Modelo** (referência, maturidade, processo) | Fidelidade, completude, nível de detalhe, compreensibilidade, utilidade | Especialistas, grupos focais, estudos de caso, cenários | Modelos de maturidade pedem validação da progressão entre níveis |
-| **Método** (processo, procedimento, técnica) | Eficácia, eficiência, operacionalidade, facilidade de uso, generalidade | Estudo de caso, experimento com usuários, pesquisa-ação técnica, comparação com método atual | Avalie o resultado do método e a execução do método |
-| **Algoritmo** | Corretude, complexidade, desempenho, acurácia, robustez | Análise formal, benchmarks com baselines, testes em dados reais e sintéticos, ablação | Baselines atuais e fortes; variação e significância estatística |
-| **Protocolo ou mecanismo de segurança** | Propriedades de segurança sob o modelo de ameaça, custo, desempenho, implantabilidade | Provas ou verificação formal, análise de segurança, implementação e benchmarks, estudo de implantação | Declare pressupostos e o que está fora do modelo de ameaça |
-| **Arquitetura ou sistema** | Atendimento a atributos de qualidade, viabilidade, escalabilidade, integração | Cenários de qualidade, protótipo, testes de desempenho e carga, estudo de caso | Mostre os trade-offs das decisões de arquitetura |
-| **Ferramenta ou interface** | Eficácia na tarefa, eficiência, usabilidade, aceitação | Experimento com usuários, testes de usabilidade, estudo de campo com logs | Combine desempenho em tarefas com percepção |
-| **Princípios de design** | Efeitos previstos, reutilização, compreensibilidade, generalidade | Instanciação e avaliação; ablação; especialistas; múltiplos contextos | Verifique a validade de instanciação |
-| **Teoria de design** | Proposições testáveis confirmadas, poder explicativo, abrangência | Múltiplos estudos; instanciações variadas | Evidência cumulativa |
+| **Construct** (taxonomy, ontology, concepts) | Completeness, clarity, consistency, usefulness for classifying or communicating | Experts; application to real cases; comparison with existing schemes; inter-rater agreement | Show that someone can use the constructs, not only that they are well defined |
+| **Model** (reference, maturity, process) | Fidelity, completeness, level of detail, understandability, utility | Experts, focus groups, case studies, scenarios | Maturity models need validation of the progression between levels |
+| **Method** (process, procedure, technique) | Efficacy, efficiency, operationality, ease of use, generality | Case study, user experiment, technical action research, comparison with the current method | Evaluate both the method's outcome and its execution |
+| **Algorithm** | Correctness, complexity, performance, accuracy, robustness | Formal analysis, benchmarks with baselines, tests on real and synthetic data, ablation | Current, strong baselines; variance and statistical significance |
+| **Protocol or security mechanism** | Security properties under the threat model, cost, performance, deployability | Proofs or formal verification, security analysis, implementation and benchmarks, deployment study | State assumptions and what is outside the threat model |
+| **Architecture or system** | Satisfaction of quality attributes, feasibility, scalability, integration | Quality scenarios, prototype, performance and load tests, case study | Show the trade-offs of architectural decisions |
+| **Tool or interface** | Task efficacy, efficiency, usability, acceptance | User experiment, usability tests, field study with logs | Combine task performance with perception |
+| **Design principles** | Predicted effects, reuse, understandability, generality | Instantiation and evaluation; ablation; experts; multiple contexts | Check instantiation validity |
+| **Design theory** | Confirmed testable propositions, explanatory power, scope | Multiple studies; varied instantiations | Cumulative evidence |
 
 ---
 
-## 9. Fichas de métodos
+## 9. Method cards
 
-### A. Argumento informado e análise lógica
-- **Quando:** ex ante; artefatos muito novos; complemento de outros métodos.
-- **Cuidados:** premissas explícitas; argumento ligado à base de conhecimento; considerar
-  contra-argumentos.
-- **Armadilha:** usar como única avaliação em tese ou artigo empírico.
+### A. Informed argument and logical analysis
+- **When:** ex ante; highly novel artifacts; as a complement to other methods.
+- **Design:** explicit premises; argument tied to the knowledge base; consider counterarguments.
+- **Pitfall:** using it as the only evaluation in a thesis or empirical paper.
 
-### B. Provas formais e verificação
-- **Quando:** protocolos, algoritmos, mecanismos de segurança, sistemas críticos.
-- **Cuidados:** definir o modelo (ameaça, falhas, pressupostos) antes; indicar o que a prova cobre e
-  o que não cobre; para verificação automatizada, disponibilizar modelos e scripts.
-- **Relate:** teorema ou propriedade, pressupostos, esboço da prova ou ferramenta, limites.
+### B. Formal proofs and verification
+- **When:** protocols, algorithms, security mechanisms, critical systems.
+- **Design:** define the model (threat, faults, assumptions) first; state what the proof covers and
+  what it does not; for automated verification, make models and scripts available.
+- **Report:** theorem or property, assumptions, proof sketch or tool, limits.
 
-### C. Cenários ilustrativos
-- **Quando:** mostrar aplicabilidade a situações variadas; complementar avaliação quantitativa.
-- **Cuidados:** cenários realistas, preferencialmente baseados em casos reais; incluir cenários
-  difíceis ou em que o artefato falha.
-- **Armadilha:** cenários escolhidos para favorecer o artefato.
+### C. Illustrative scenarios
+- **When:** showing applicability to varied situations; complementing quantitative evaluation.
+- **Design:** realistic scenarios, preferably based on real cases; include hard scenarios or ones
+  where the artifact fails.
+- **Pitfall:** scenarios chosen to favor the artifact.
 
-### D. Avaliação por especialistas
-- **Quando:** ex ante (requisitos, design) e ex post (modelos, métodos, princípios).
-- **Seleção:** critérios explícitos de expertise (anos, função, domínio); diversidade de
-  perspectivas; independência em relação ao pesquisador sempre que possível.
-- **Instrumento:** perguntas ligadas aos critérios; escalas acompanhadas de justificativas
-  qualitativas; roteiro publicado em apêndice.
-- **Tamanho:** não há número mágico. Justifique pela saturação das respostas ou pelo desenho
-  (p. ex., rodadas Delphi até o consenso).
-- **Relate:** perfil dos especialistas, instrumento, análise, divergências e o que mudou no artefato.
+### D. Expert evaluation
+- **When:** ex ante (requirements, design) and ex post (models, methods, principles).
+- **Selection:** explicit expertise criteria (years, role, domain); diversity of perspectives;
+  independence from the researcher whenever possible.
+- **Instrument:** questions tied to the criteria; rating scales accompanied by qualitative
+  justifications; protocol published in an appendix.
+- **Size:** there is no magic number. Justify by saturation of responses or by design (e.g., Delphi
+  rounds until consensus).
+- **Report:** expert profiles, instrument, analysis, disagreements, and what changed in the artifact.
 
-### E. Grupos focais (Tremblay et al., 2010)
-- **Grupos focais exploratórios:** formativos; melhorias incrementais do design.
-- **Grupos focais confirmatórios:** somativos; demonstram a utilidade do artefato em uso real.
-- **Cuidados:** moderador que não defenda o artefato; roteiro; gravação e análise sistemática;
-  relatar o que mudou entre rodadas.
+### E. Focus groups (Tremblay et al., 2010)
+- **Exploratory focus groups:** formative; incremental improvements to the design.
+- **Confirmatory focus groups:** summative; demonstrate the artifact's utility in real use.
+- **Design:** a moderator who does not advocate for the artifact; a script; recording and systematic
+  analysis; report what changed between rounds.
 
-### F. Experimentos técnicos e benchmarks
-- **Quando:** algoritmos, sistemas, protocolos, pipelines.
-- **Cuidados:**
-  - baselines fortes e atuais, com configuração justa (mesmo hardware, ajuste equivalente);
-  - cargas de trabalho e dados representativos da classe de problemas, reais quando possível;
-  - repetições, variância, intervalos de confiança e testes estatísticos adequados;
-  - **ablação** para ligar cada decisão de design ou princípio ao efeito — evidência muito forte
-    em DSR, porque mostra *por que* o artefato funciona;
-  - artefato, dados e scripts disponíveis para reprodução.
-- **Armadilha:** comparar só com a versão anterior do próprio artefato.
+### F. Technical experiments and benchmarks
+- **When:** algorithms, systems, protocols, pipelines.
+- **Design:**
+  - strong, current baselines with a fair setup (same hardware, equivalent tuning);
+  - workloads and data representative of the class of problems, real when possible;
+  - repetitions, variance, confidence intervals, and appropriate statistical tests;
+  - **ablation** to link each design decision or principle to its effect — very strong evidence in
+    DSR, because it shows *why* the artifact works;
+  - artifact, data, and scripts available for reproduction.
+- **Pitfall:** comparing only against a previous version of one's own artifact.
 
-### G. Simulação
-- **Quando:** ambientes caros, perigosos ou ainda inexistentes; escala.
-- **Cuidados:** validar o simulador ou o modelo; análise de sensibilidade dos parâmetros; discutir a
-  distância entre simulação e realidade.
+### G. Simulation
+- **When:** environments that are expensive, dangerous, or do not yet exist; scale.
+- **Design:** validate the simulator or model; sensitivity analysis of parameters; discuss the gap
+  between simulation and reality.
 
-### H. Experimentos com usuários
-- **Quando:** efeito do artefato sobre o desempenho ou o comportamento de pessoas.
-- **Cuidados:** hipóteses e medidas definidas antes; condição de controle (sem artefato ou com
-  alternativa); desenho entre sujeitos ou intra-sujeitos, com contrabalanceamento; tarefas
-  realistas; cálculo ou justificativa do tamanho da amostra; checagens de manipulação.
-- **Armadilhas:** colegas de laboratório como participantes; participantes que sabem qual
-  condição é "a do pesquisador".
+### H. User experiments
+- **When:** the artifact's effect on people's performance or behavior.
+- **Design:** hypotheses and measures defined in advance; control condition (no artifact or an
+  alternative); between- or within-subjects design with counterbalancing; realistic tasks; sample
+  size calculation or justification; manipulation checks.
+- **Pitfalls:** labmates as participants; participants who know which condition is "the
+  researcher's."
 
-### I. Estudo de caso e estudo de campo
-- **Quando:** avaliação naturalística; efetividade e adequação ao contexto.
-- **Cuidados:** protocolo de caso; múltiplas fontes de evidência (logs, entrevistas, documentos,
-  métricas); critérios definidos antes; relato de problemas e usos inesperados.
-- **Relate:** contexto detalhado (para permitir julgamento de transferibilidade), período,
-  participantes, dados, análise.
+### I. Case study and field study
+- **When:** naturalistic evaluation; effectiveness and fit with context.
+- **Design:** case protocol; multiple sources of evidence (logs, interviews, documents, metrics);
+  criteria defined in advance; report problems and unexpected uses.
+- **Report:** rich context description (so readers can judge transferability), period, participants,
+  data, analysis.
 
-### J. Pesquisa-ação técnica e ADR
-- **Quando:** artefato usado para resolver problema de um cliente real, com o pesquisador
-  envolvido.
-- **Cuidados:** separar os papéis de projetista, pesquisador e ajudante (Wieringa & Moralı, 2012);
-  diário de intervenções; acordo com a organização; reflexão explícita sobre viés.
+### J. Technical action research and ADR
+- **When:** the artifact is used to solve a real client's problem, with the researcher involved.
+- **Design:** separate the roles of designer, researcher, and helper (Wieringa & Moralı, 2012);
+  intervention log; agreement with the organization; explicit reflection on bias.
 
-### K. Questionários de percepção
-- **Quando:** aceitação, usabilidade e utilidade percebida, como complemento.
-- **Cuidados:** instrumentos validados na versão e no idioma usados; relatar o instrumento
-  completo; não tratar percepção como prova de eficácia.
-- **Armadilha:** "avaliação" composta só de um questionário aplicado a poucas pessoas próximas do
-  pesquisador.
+### K. Perception questionnaires
+- **When:** acceptance, usability, and perceived usefulness, as a complement.
+- **Design:** instruments validated in the version and language used; report the full instrument; do
+  not treat perception as proof of efficacy.
+- **Pitfall:** an "evaluation" consisting only of a questionnaire given to a few people close to the
+  researcher.
 
-### L. Custo, viabilidade e adoção
-- **Quando:** artefatos organizacionais; argumento de valor prático.
-- **Cuidados:** premissas de custo explícitas; análise de sensibilidade; incluir custos de
-  implantação e manutenção.
+### L. Cost, feasibility, and adoption
+- **When:** organizational artifacts; practical value arguments.
+- **Design:** explicit cost assumptions; sensitivity analysis; include deployment and maintenance
+  costs.
 
 ---
 
-## 10. Ameaças à validade
+## 10. Threats to validity
 
-| Tipo | Ameaça típica em DSR | Mitigações |
+| Type | Typical threat in DSR | Mitigations |
 |---|---|---|
-| **Instanciação** | A instância não materializa fielmente os princípios; efeitos vêm de detalhes incidentais | Mapear princípio → característica; múltiplas instanciações; ablação; manter constantes os aspectos incidentais |
-| **Construto** | A métrica não mede o requisito (p. ex., satisfação no lugar de eficácia) | Derivar métricas dos requisitos; métricas múltiplas; instrumentos validados |
-| **Interna** | Pesquisador projeta e avalia; efeito novidade; participantes querem agradar; aprendizado entre tarefas | Avaliadores independentes; limiares prévios; cegamento; contrabalanceamento; condição de controle |
-| **Externa** | Contexto, participantes ou dados não representam a classe de problemas | Declarar condições de contorno; contextos variados; descrição rica do contexto |
-| **Conclusão** | Amostra pequena; testes inadequados; muitas comparações; variância ignorada em benchmarks | Poder estatístico; correções para múltiplas comparações; repetições; tamanhos de efeito |
-| **Ecológica** | Ambiente artificial distante do uso real | Trajetória FEDS até o naturalístico; discutir a distância |
-| **Reprodutibilidade** | Artefato, dados ou configuração indisponíveis | Repositório versionado; dados ou dados sintéticos equivalentes; descrição do ambiente |
+| **Instantiation** | The instance does not faithfully embody the principles; effects come from incidental details | Map principle → feature; multiple instantiations; ablation; hold incidental aspects constant |
+| **Construct** | The metric does not measure the requirement (e.g., satisfaction instead of efficacy) | Derive metrics from requirements; multiple metrics; validated instruments |
+| **Internal** | Researcher designs and evaluates; novelty effect; participants want to please; learning across tasks | Independent evaluators; thresholds set in advance; blinding; counterbalancing; control condition |
+| **External** | Context, participants, or data do not represent the class of problems | State boundary conditions; varied contexts; rich description of context |
+| **Conclusion** | Small sample; inappropriate tests; many comparisons; variance ignored in benchmarks | Statistical power; corrections for multiple comparisons; repetitions; effect sizes |
+| **Ecological** | Artificial setting far from real use | FEDS trajectory toward naturalistic; discuss the gap |
+| **Reproducibility** | Artifact, data, or configuration unavailable | Versioned repository; data or equivalent synthetic data; environment description |
 
-Relate as ameaças que de fato se aplicam, com a mitigação adotada e o risco residual. Uma lista
-genérica sem ligação com o estudo é lida como formalidade.
-
----
-
-## 11. Ética
-
-### Princípios éticos para DSR (Myers & Venable, 2014)
-1. **Interesse público** — considerar se o artefato e seu uso beneficiam ou prejudicam
-   stakeholders e a sociedade.
-2. **Consentimento informado** — de quem participa do design e da avaliação.
-3. **Privacidade** — proteção de dados pessoais usados ou coletados.
-4. **Honestidade e precisão** — relatar resultados, limitações e autoria corretamente.
-5. **Propriedade** — direitos sobre o artefato e a propriedade intelectual, acordados com as
-   partes.
-6. **Qualidade do artefato** — cuidado para que o artefato não cause danos por defeitos.
-
-### Contexto brasileiro
-- Pesquisas com seres humanos: apreciação por Comitê de Ética em Pesquisa (CEP) via Plataforma
-  Brasil, conforme as Resoluções CNS nº 466/2012 e nº 510/2016 (esta para ciências humanas e
-  sociais). Verifique com o CEP da instituição quais etapas da avaliação exigem apreciação.
-- Dados pessoais: LGPD (Lei nº 13.709/2018) — base legal, minimização, anonimização.
-- Em outros países, use o equivalente (IRB, GDPR etc.).
-
-### Segurança e uso dual
-- Testes apenas em sistemas com autorização explícita.
-- Divulgação responsável de vulnerabilidades encontradas.
-- Discussão dos riscos de mau uso do artefato e de mitigações.
+Report the threats that actually apply, with the mitigation adopted and the residual risk. A generic
+list unconnected to the study reads as a formality.
 
 ---
 
-## 12. Checklist do plano de avaliação
+## 11. Ethics
 
-- [ ] Objetivos da avaliação explícitos e priorizados (rigor, risco, ética, eficiência)
-- [ ] Estratégia escolhida e justificada pelos riscos do projeto
-- [ ] Cada requisito ligado a critério, métrica, comparador e limiar definidos antes
-- [ ] Episódios distribuídos ao longo do projeto (formativos e somativos)
-- [ ] Pelo menos um episódio somativo adequado ao tipo de artefato e às afirmações do trabalho
-- [ ] Baseline ou comparador relevante e atual
-- [ ] Participantes, dados e contextos descritos e justificados
-- [ ] Viés de quem projeta e avalia mitigado
-- [ ] Ameaças à validade específicas e mitigações
-- [ ] Aprovação ética e proteção de dados, quando aplicável
-- [ ] Artefato, instrumentos e dados disponíveis para reprodução, quando possível
-- [ ] Resultados negativos e mudanças no artefato registrados no histórico de iterações
+### Ethical principles for DSR (Myers & Venable, 2014)
+1. **Public interest** — consider whether the artifact and its use benefit or harm stakeholders and
+   society.
+2. **Informed consent** — from those who take part in design and evaluation.
+3. **Privacy** — protection of personal data used or collected.
+4. **Honesty and accuracy** — report results, limitations, and authorship correctly.
+5. **Property** — rights over the artifact and intellectual property, agreed with the parties.
+6. **Quality of the artifact** — care that the artifact does not cause harm through defects.
+
+### Approvals and data protection
+- Research with human participants: approval by the relevant ethics board (IRB, REC). In Brazil:
+  Research Ethics Committee (CEP) via Plataforma Brasil, under CNS Resolutions No. 466/2012 and
+  No. 510/2016 (the latter for human and social sciences). Check with the institution's board which
+  evaluation steps require review.
+- Personal data: the applicable law (e.g., GDPR in the EU, LGPD — Law No. 13,709/2018 — in Brazil):
+  legal basis, minimization, anonymization.
+
+### Security and dual use
+- Test only systems with explicit authorization.
+- Responsible disclosure of vulnerabilities found.
+- Discussion of misuse risks of the artifact and their mitigations.
+
+---
+
+## 12. Evaluation plan checklist
+
+- [ ] Evaluation goals explicit and prioritized (rigor, risk, ethics, efficiency)
+- [ ] Strategy chosen and justified by the project's risks
+- [ ] Each requirement linked to a criterion, metric, comparator, and threshold defined in advance
+- [ ] Episodes spread across the project (formative and summative)
+- [ ] At least one summative episode appropriate to the artifact type and to the claims made
+- [ ] Relevant, current baseline or comparator
+- [ ] Participants, data, and contexts described and justified
+- [ ] Bias of whoever designs and evaluates mitigated
+- [ ] Specific threats to validity and mitigations
+- [ ] Ethics approval and data protection where applicable
+- [ ] Artifact, instruments, and data available for reproduction where possible
+- [ ] Negative results and artifact changes recorded in the iteration log

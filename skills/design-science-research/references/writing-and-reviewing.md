@@ -1,270 +1,269 @@
-# Escrita, publicação e revisão de DSR
+# Writing, publishing, and reviewing DSR
 
-## Sumário
-1. Esquema de publicação (Gregor & Hevner, 2013)
-2. Estrutura de tese, dissertação e qualificação
-3. Questões de pesquisa, objetivos e checklist de Hevner & Chatterjee
-4. Título, resumo e introdução
-5. Venues e vocabulário por comunidade
-6. Sínteses de uma página: DSR Grid e visual abstract
-7. Rubrica de revisão de manuscritos DSR
-8. Atribuições trocadas e erros de citação frequentes
-9. Críticas frequentes de revisores e como responder
+## Contents
+1. Publication schema (Gregor & Hevner, 2013)
+2. Thesis, dissertation, and proposal structure
+3. Research questions, objectives, and the Hevner & Chatterjee checklist
+4. Title, abstract, and introduction
+5. Venues and vocabulary by community
+6. One-page summaries: DSR Grid and visual abstract
+7. Review rubric for DSR manuscripts
+8. Misattributions and frequent citation errors
+9. Frequent reviewer criticisms and how to respond
 
 ---
 
-## 1. Esquema de publicação (Gregor & Hevner, 2013)
+## 1. Publication schema (Gregor & Hevner, 2013)
 
-| Seção | Conteúdo esperado | Dicas |
+| Section | Expected content | Tips |
 |---|---|---|
-| **1. Introdução** | Problema e relevância; questão ou objetivo de pesquisa; abordagem DSR; resumo das contribuições; estrutura do texto | Declare cedo o artefato e o tipo de contribuição; o leitor não deve chegar à seção 4 sem saber o que foi construído |
-| **2. Revisão de literatura** | Conhecimento sobre o problema (Ω); soluções existentes e suas limitações (Λ); teorias de base; lacuna | Termine com critérios de comparação que reaparecem na avaliação |
-| **3. Método** | Por que DSR; processo e adaptações; iterações; estratégia de avaliação; dados e participantes; ética | Justifique as escolhas; inclua figura ou tabela com o processo efetivamente seguido |
-| **4. Descrição do artefato** | Requisitos; arquitetura ou estrutura; decisões de design e fundamentação; alternativas; princípios; processo de busca | Detalhe suficiente para reconstrução; material extenso em apêndice ou repositório |
-| **5. Avaliação** | Episódios, métodos, critérios, resultados, ameaças à validade | Organize por requisito ou por episódio, mas mantenha a ligação requisito → resultado |
-| **6. Discussão** | Interpretação; contribuição ao conhecimento (quadrante, nível, princípios); implicações para pesquisa e prática; generalização; limitações | É aqui que o artefato vira conhecimento |
-| **7. Conclusões** | Resposta às questões; contribuições; trabalhos futuros | Sem resultados novos |
+| **1. Introduction** | Problem and relevance; research question or objective; DSR approach; summary of contributions; outline | Name the artifact and the type of contribution early; readers should not reach section 4 without knowing what was built |
+| **2. Literature review** | Knowledge about the problem (Ω); existing solutions and their limitations (Λ); kernel theories; gap | End with comparison criteria that reappear in the evaluation |
+| **3. Method** | Why DSR; process and adaptations; iterations; evaluation strategy; data and participants; ethics | Justify choices; include a figure or table of the process actually followed |
+| **4. Artifact description** | Requirements; architecture or structure; design decisions and grounding; alternatives; principles; search process | Enough detail to rebuild it; lengthy material in an appendix or repository |
+| **5. Evaluation** | Episodes, methods, criteria, results, threats to validity | Organize by requirement or by episode, but keep the requirement → result link |
+| **6. Discussion** | Interpretation; contribution to knowledge (quadrant, level, principles); implications for research and practice; generalization; limitations | This is where the artifact becomes knowledge |
+| **7. Conclusions** | Answers to the questions; contributions; future work | No new results |
 
-A ordem é flexível: em projetos com várias iterações, descrição do artefato e avaliação podem se
-alternar por ciclo.
-
----
-
-## 2. Estrutura de tese, dissertação e qualificação
-
-### Opção A — Monografia tradicional
-1. **Introdução** — contexto, problema, motivação, questões, objetivos, contribuições, estrutura.
-2. **Fundamentação teórica** — conceitos e teorias de base (Ω).
-3. **Trabalhos relacionados** — estado da arte das soluções (Λ), com tabela comparativa por
-   critérios que voltarão na avaliação.
-4. **Metodologia** — DSR e justificativa; processo e adaptações; mapa *etapas do processo ×
-   capítulos*; estratégia de avaliação; protocolo; ética; visão geral das iterações.
-5. **Investigação do problema e requisitos** — quando há estudo próprio do problema.
-6. **Artefato** — design, decisões, alternativas, princípios.
-7. **Avaliação** — episódios e resultados.
-8. **Discussão** — contribuições (quadrante, níveis), princípios de design, generalização,
-   implicações, limitações.
-9. **Conclusão** — respostas às questões e trabalhos futuros.
-
-### Opção B — Por iterações
-Após a metodologia, um capítulo por ciclo de design (refinamento do problema → design → avaliação →
-aprendizagens → mudanças), seguido de discussão consolidada. Mostra a busca e a evolução do
-artefato de forma natural; exige disciplina para não repetir conteúdo.
-
-### Opção C — Coletânea de artigos
-- Capítulo introdutório integrador que apresenta o arco DSR completo.
-- Tabela que posiciona cada artigo: atividade do processo, ciclo, episódio de avaliação,
-  contribuição.
-- Textos de ligação entre artigos explicando o que cada um mudou no artefato.
-- Discussão integrada com a contribuição global, que não é a soma dos artigos.
-- Artigos publicados em venues de computação podem não usar o vocabulário DSR; o capítulo
-  integrador faz a tradução.
-
-### Qualificação ou proposta
-A banca espera ver: evidência do problema; requisitos preliminares com origem; design inicial ou
-protótipo; plano de avaliação com estratégia e episódios; cronograma por iterações; riscos e
-alternativas; aspectos éticos. Um protocolo DSR (`templates.md` §1) cobre esses itens.
+The order is flexible: in projects with several iterations, artifact description and evaluation can
+alternate by cycle.
 
 ---
 
-## 3. Questões de pesquisa, objetivos e checklist
+## 2. Thesis, dissertation, and proposal structure
 
-### Questão principal (problema de design)
-- "Como projetar [artefato ou classe de artefatos] para [objetivo] em [contexto ou classe de
-  contextos]?"
-- "Quais princípios de design orientam [classe de artefatos] para alcançar [objetivo] em
-  [classe de contextos]?"
+### Option A — Traditional monograph
+1. **Introduction** — context, problem, motivation, questions, objectives, contributions, outline.
+2. **Theoretical background** — concepts and kernel theories (Ω).
+3. **Related work** — state of the art of solutions (Λ), with a comparison table using criteria that
+   will return in the evaluation.
+4. **Methodology** — DSR and its justification; process and adaptations; map of *process steps ×
+   chapters*; evaluation strategy; protocol; ethics; overview of iterations.
+5. **Problem investigation and requirements** — when there is a dedicated study of the problem.
+6. **Artifact** — design, decisions, alternatives, principles.
+7. **Evaluation** — episodes and results.
+8. **Discussion** — contributions (quadrant, levels), design principles, generalization,
+   implications, limitations.
+9. **Conclusion** — answers to the questions and future work.
 
-### Subquestões (questões de conhecimento, à maneira de Wieringa, 2014)
-| Finalidade | Modelo |
+### Option B — By iteration
+After the methodology, one chapter per design cycle (problem refinement → design → evaluation →
+learnings → changes), followed by a consolidated discussion. It shows the search process and the
+artifact's evolution naturally; it takes discipline to avoid repetition.
+
+### Option C — Thesis by publication
+- An integrative introductory chapter presenting the complete DSR arc.
+- A table positioning each paper: process activity, cycle, evaluation episode, contribution.
+- Linking text between papers explaining what each one changed in the artifact.
+- An integrated discussion of the overall contribution, which is not the sum of the papers.
+- Papers published in computer science venues may not use DSR vocabulary; the integrative chapter
+  translates.
+
+### Proposal or qualifying exam
+The committee expects: evidence of the problem; preliminary requirements with sources; an initial
+design or prototype; an evaluation plan with strategy and episodes; a schedule by iteration; risks
+and alternatives; ethical aspects. A DSR protocol (`templates.md` §1) covers these items.
+
+---
+
+## 3. Research questions, objectives, and checklist
+
+### Main question (design problem)
+- "How should [artifact or class of artifacts] be designed to [objective] in [context or class of
+  contexts]?"
+- "Which design principles guide [class of artifacts] to achieve [objective] in [class of
+  contexts]?"
+
+### Sub-questions (knowledge questions, following Wieringa, 2014)
+| Purpose | Template |
 |---|---|
-| Investigação do problema | "Quais são as causas e os efeitos de [problema] em [contexto]?" |
-| Requisitos | "Que requisitos um [artefato] deve satisfazer para [objetivo] segundo [stakeholders ou literatura]?" |
-| Efeito | "Qual o efeito de [artefato] sobre [critério] em comparação com [baseline] em [contexto]?" |
-| Trade-off | "Como [alternativas de design] se comparam quanto a [critérios]?" |
-| Sensibilidade | "Como o efeito de [artefato] varia com [característica do contexto]?" |
+| Problem investigation | "What are the causes and effects of [problem] in [context]?" |
+| Requirements | "Which requirements must a [artifact] satisfy to [objective] according to [stakeholders or literature]?" |
+| Effect | "What is the effect of [artifact] on [criterion] compared with [baseline] in [context]?" |
+| Trade-off | "How do [design alternatives] compare on [criteria]?" |
+| Sensitivity | "How does the effect of [artifact] vary with [context characteristic]?" |
 
-Separe explicitamente a questão de design (resposta: um artefato) das questões de conhecimento
-(resposta: fatos ou explicações).
+Separate the design question (answer: an artifact) explicitly from the knowledge questions (answer:
+facts or explanations).
 
-### Objetivos
-- **Geral:** "Projetar e avaliar [artefato] para [objetivo] em [contexto]."
-- **Específicos**, formulados como resultados e alinhados às atividades do processo:
-  "caracterizar [problema] em [contexto]"; "definir requisitos para [artefato]"; "projetar e
-  instanciar [artefato]"; "avaliar [artefato] quanto a [critérios]"; "derivar princípios de design
-  para [classe]".
-- Evite objetivos que são tarefas ("realizar revisão de literatura", "estudar o tema").
+### Objectives
+- **General:** "Design and evaluate [artifact] to [objective] in [context]."
+- **Specific**, phrased as outcomes and aligned with the process activities: "characterize
+  [problem] in [context]"; "define requirements for [artifact]"; "design and instantiate
+  [artifact]"; "evaluate [artifact] with respect to [criteria]"; "derive design principles for
+  [class]".
+- Avoid objectives that are tasks ("conduct a literature review," "study the topic").
 
-### Checklist de DSR (Hevner & Chatterjee, 2010)
-Use como autoverificação de proposta ou manuscrito:
-1. Qual é a questão de pesquisa (requisitos de design)?
-2. Qual é o artefato e como é representado?
-3. Que processos de design (heurísticas de busca) serão usados para construí-lo?
-4. Como o artefato e os processos de design se apoiam na base de conhecimento? Que teorias os
-   sustentam?
-5. Que avaliações são feitas nos ciclos internos de design e que melhorias elas geram?
-6. Como o artefato é introduzido no ambiente de aplicação e testado em campo? Que métricas mostram
-   sua utilidade e sua melhoria em relação a artefatos anteriores?
-7. Que conhecimento novo é adicionado à base de conhecimento, e em que forma?
-8. A questão de pesquisa foi respondida satisfatoriamente?
-
----
-
-## 4. Título, resumo e introdução
-
-### Títulos
-- "[Nome do artefato]: [tipo de artefato] para [objetivo] em [contexto]"
-- "Projetando [classe de artefato] para [objetivo]: princípios de design e avaliação em [contexto]"
-Evite títulos que nomeiam só a tecnologia ("Uma solução baseada em X").
-
-### Resumo estruturado
-1. Contexto e problema (1–2 frases, com dado de relevância se possível)
-2. Lacuna nas soluções atuais
-3. Objetivo
-4. Método: DSR, processo, número de iterações
-5. Artefato: o que é, em uma frase
-6. Avaliação: estratégia, métodos, participantes ou dados
-7. Resultados principais, com números
-8. Contribuição: conhecimento de design e implicações
-
-### Movimentos da introdução
-1. Por que o problema importa (evidência).
-2. O que já se tentou e por que não basta.
-3. O que este trabalho faz (artefato e abordagem).
-4. Como foi avaliado e o que se encontrou.
-5. Lista de contribuições, verificáveis e específicas.
-6. Estrutura do texto.
+### DSR checklist (Hevner & Chatterjee, 2010)
+Use as a self-check for a proposal or manuscript:
+1. What is the research question (design requirements)?
+2. What is the artifact, and how is it represented?
+3. What design processes (search heuristics) will be used to build it?
+4. How are the artifact and design processes grounded in the knowledge base? Which theories support
+   them?
+5. What evaluations are performed during the internal design cycles, and what improvements do they
+   produce?
+6. How is the artifact introduced into the application environment and field-tested? What metrics
+   show its utility and its improvement over previous artifacts?
+7. What new knowledge is added to the knowledge base, and in what form?
+8. Has the research question been satisfactorily addressed?
 
 ---
 
-## 5. Venues e vocabulário por comunidade
+## 4. Title, abstract, and introduction
 
-As expectativas mudam muito entre comunidades. Verifique sempre as chamadas e as normas atuais da
-venue-alvo.
+### Titles
+- "[Artifact name]: A [artifact type] for [objective] in [context]"
+- "Designing [class of artifact] for [objective]: Design principles and evaluation in [context]"
+Avoid titles that name only the technology ("An X-based solution").
 
-| Comunidade | Exemplos de venues | Expectativas |
+### Structured abstract
+1. Context and problem (1–2 sentences, with a relevance figure if possible)
+2. Gap in current solutions
+3. Objective
+4. Method: DSR, process, number of iterations
+5. Artifact: what it is, in one sentence
+6. Evaluation: strategy, methods, participants or data
+7. Main results, with numbers
+8. Contribution: design knowledge and implications
+
+### Introduction moves
+1. Why the problem matters (evidence).
+2. What has been tried and why it is not enough.
+3. What this work does (artifact and approach).
+4. How it was evaluated and what was found.
+5. A list of specific, verifiable contributions.
+6. Outline.
+
+---
+
+## 5. Venues and vocabulary by community
+
+Expectations vary a lot across communities. Always check the current calls and norms of the target
+venue.
+
+| Community | Example venues | Expectations |
 |---|---|---|
-| Sistemas de Informação | MIS Quarterly, ISR, JMIS, JAIS, EJIS, BISE; conferências DESRIST, ICIS, ECIS, PACIS, AMCIS, HICSS | Vocabulário DSR explícito; abstração (princípios ou teoria); discussão de contribuição; frameworks canônicos citados |
-| Engenharia de software | ICSE, FSE, ESEM; EMSE, IST, JSS, TSE | Regras tecnológicas; validação empírica rigorosa; ameaças à validade; artefatos disponíveis. Os ACM SIGSOFT Empirical Standards têm um padrão para pesquisa de engenharia (design science) — consulte a versão atual |
-| Computação, sistemas, redes, segurança | Conferências e periódicos da área | Raramente usam "DSR"; esperam modelo de ameaça ou de sistema, objetivos de projeto, análise, implementação e avaliação experimental forte contra o estado da arte |
-| Gestão e engenharia de produção | Periódicos de operações e gestão; no Brasil, p. ex., Gestão & Produção | Regras tecnológicas, CIMO, Dresch et al.; relevância gerencial |
-| Brasil — SI | SBSI; iSys — Revista Brasileira de Sistemas de Informação | Vocabulário DSR bem aceito; contribuições aplicadas |
+| Information Systems | MIS Quarterly, ISR, JMIS, JAIS, EJIS, BISE; DESRIST, ICIS, ECIS, PACIS, AMCIS, HICSS | Explicit DSR vocabulary; abstraction (principles or theory); contribution discussion; canonical frameworks cited |
+| Software engineering | ICSE, FSE, ESEM; EMSE, IST, JSS, TSE | Technological rules; rigorous empirical validation; threats to validity; available artifacts. The ACM SIGSOFT Empirical Standards include a standard for engineering (design science) research — check the current version |
+| Computer science, systems, networking, security | The field's conferences and journals | Rarely use "DSR"; expect a threat or system model, design goals, analysis, implementation, and strong experimental evaluation against the state of the art |
+| Management and production engineering | Operations and management journals; in Brazil, e.g., Gestão & Produção | Technological rules, CIMO, Dresch et al.; managerial relevance |
+| Brazil — IS | SBSI; iSys — Brazilian Journal of Information Systems | DSR vocabulary well accepted; applied contributions |
 
-### DSR em artigos de computação e segurança
-Mantenha a lógica e troque o vocabulário:
+### DSR in computer science and security papers
+Keep the logic and switch the vocabulary:
 
-| Elemento DSR | Seção típica | Como escrever |
+| DSR element | Typical section | How to write it |
 |---|---|---|
-| Problema e relevância | Introdução, motivação | Cenário concreto, custo ou impacto, limitações do estado da arte |
-| Base de conhecimento (Ω) | Background | Conceitos e pressupostos necessários |
-| Requisitos | Modelo de ameaça ou de sistema; objetivos de projeto; não objetivos | Objetivos numerados, referenciados depois na avaliação |
-| Artefato e decisões | Design ou arquitetura; protocolo | Cada decisão ligada a um objetivo; alternativas em "design alternatives" ou na discussão |
-| Avaliação analítica | Análise de segurança; provas | Propriedades sob o modelo de ameaça |
-| Instanciação | Implementação | Detalhes suficientes para reprodução; código disponível |
-| Avaliação empírica | Evaluation | Perguntas de avaliação explícitas; baselines; ablação |
-| Conhecimento de design | Discussion, lessons learned | Lições generalizáveis e condições em que valem |
-| Estado da arte das soluções (Λ) | Related work | Comparação por dimensões, não lista de trabalhos |
-| Limitações | Limitations, discussion | Pressupostos, ameaças, fora de escopo |
+| Problem and relevance | Introduction, motivation | Concrete scenario, cost or impact, limitations of the state of the art |
+| Knowledge base (Ω) | Background | Concepts and assumptions needed |
+| Requirements | Threat or system model; design goals; non-goals | Numbered goals, referenced later in the evaluation |
+| Artifact and decisions | Design or architecture; protocol | Each decision linked to a goal; alternatives in "design alternatives" or the discussion |
+| Analytical evaluation | Security analysis; proofs | Properties under the threat model |
+| Instantiation | Implementation | Enough detail for reproduction; code available |
+| Empirical evaluation | Evaluation | Explicit evaluation questions; baselines; ablation |
+| Design knowledge | Discussion, lessons learned | Generalizable lessons and the conditions under which they hold |
+| State of the art of solutions (Λ) | Related work | Comparison along dimensions, not a list of papers |
+| Limitations | Limitations, discussion | Assumptions, threats, out of scope |
 
-Na tese, o capítulo de metodologia pode explicitar DSR e mapear os artigos para o processo, mesmo
-que os artigos não usem o termo.
+In a thesis, the methodology chapter can make DSR explicit and map the papers onto the process, even
+if the papers themselves do not use the term.
 
 ---
 
-## 6. Sínteses de uma página
+## 6. One-page summaries
 
 ### DSR Grid (vom Brocke & Maedche, 2019)
-Seis dimensões para planejar e comunicar um projeto numa página: **problema**, **conhecimento de
-entrada**, **processo de pesquisa**, **conceitos-chave**, **solução** e **conhecimento de saída**.
-Útil em propostas, qualificações, pôsteres e para alinhar com orientador. Modelo em
-`templates.md` §11.
+Six dimensions to plan and communicate a project on one page: **problem**, **input knowledge**,
+**research process**, **key concepts**, **solution**, and **output knowledge**. Useful in proposals,
+qualifying exams, posters, and for aligning with a supervisor. Template in `templates.md` §11.
 
 ### Visual abstract (Storey et al., 2017)
-Para engenharia de software: regra tecnológica no centro; instância do problema, conceituação do
-problema, projeto da solução e validação empírica em volta; e avaliação em três lentes —
-relevância, rigor e novidade.
+For software engineering: the technological rule at the center; the problem instance, problem
+conceptualization, solution design, and empirical validation around it; and an assessment through
+three lenses — relevance, rigor, and novelty.
 
 ---
 
-## 7. Rubrica de revisão de manuscritos DSR
+## 7. Review rubric for DSR manuscripts
 
-Se outra rubrica geral de revisão estiver em uso, esta a complementa com as dimensões específicas de
-DSR. Para cada dimensão, registre achados com localização (seção, figura, tabela) e severidade.
+If a general peer-review rubric is also in use, this one complements it with DSR-specific
+dimensions. For each dimension, record findings with location (section, figure, table) and severity.
 
-**Severidade:**
-- **Crítico** — compromete a existência da contribuição ou a validade das conclusões principais
-  (p. ex., sem avaliação, novidade inexistente, afirmações sem evidência).
-- **Importante** — enfraquece significativamente o trabalho, mas é corrigível (baseline fraco,
-  requisitos sem origem, ameaças à validade ausentes).
-- **Menor** — clareza, terminologia, apresentação.
+**Severity:**
+- **Critical** — undermines the existence of the contribution or the validity of the main
+  conclusions (e.g., no evaluation, no novelty, claims without evidence).
+- **Major** — significantly weakens the work but is fixable (weak baseline, requirements without
+  sources, missing threats to validity).
+- **Minor** — clarity, terminology, presentation.
 
-| # | Dimensão | Perguntas-guia |
+| # | Dimension | Guiding questions |
 |---|---|---|
-| R1 | **Enquadramento** | A pergunta é prescritiva? DSR é a abordagem adequada e está justificado? O processo declarado é o seguido? |
-| R2 | **Problema e relevância** | Há evidência do problema? Stakeholders identificados? Classe de problemas definida? |
-| R3 | **Base de conhecimento** | O estado da arte das soluções está mapeado com critérios? As teorias de base são usadas nas decisões de design? |
-| R4 | **Requisitos** | Explícitos, verificáveis e com origem? Definidos antes da avaliação? |
-| R5 | **Artefato e busca** | Descrição suficiente para reconstrução? Decisões justificadas? Alternativas e iterações relatadas? |
-| R6 | **Avaliação** | Estratégia justificada pelos riscos? Critérios ligados aos requisitos? Métodos adequados ao tipo de artefato? Baseline adequado? Formativa e somativa? Participantes e dados adequados? Ética? |
-| R7 | **Resultados vs. afirmações** | As conclusões se limitam ao que a evidência mostra? Resultados negativos relatados? |
-| R8 | **Contribuição e novidade** | Quadrante e nível plausíveis? Conhecimento de design explícito, além do artefato? |
-| R9 | **Generalização e limites** | Condições de contorno declaradas? Validade de instanciação discutida? Ameaças específicas? |
-| R10 | **Comunicação e reprodutibilidade** | Estrutura clara para públicos técnicos e gerenciais? Artefato, instrumentos e dados disponíveis? Citações de DSR corretas (§8)? |
+| R1 | **Framing** | Is the question prescriptive? Is DSR the appropriate approach, and is that justified? Is the declared process the one followed? |
+| R2 | **Problem and relevance** | Is there evidence of the problem? Are stakeholders identified? Is the class of problems defined? |
+| R3 | **Knowledge base** | Is the state of the art of solutions mapped with criteria? Are kernel theories used in design decisions? |
+| R4 | **Requirements** | Explicit, verifiable, and sourced? Defined before the evaluation? |
+| R5 | **Artifact and search** | Description sufficient to rebuild it? Decisions justified? Alternatives and iterations reported? |
+| R6 | **Evaluation** | Strategy justified by risks? Criteria linked to requirements? Methods appropriate to the artifact type? Adequate baseline? Formative and summative? Adequate participants and data? Ethics? |
+| R7 | **Results vs. claims** | Are conclusions limited to what the evidence shows? Negative results reported? |
+| R8 | **Contribution and novelty** | Plausible quadrant and level? Design knowledge explicit, beyond the artifact? |
+| R9 | **Generalization and limits** | Boundary conditions stated? Instantiation validity discussed? Specific threats? |
+| R10 | **Communication and reproducibility** | Clear structure for technical and managerial audiences? Artifact, instruments, and data available? DSR citations correct (§8)? |
 
-**Síntese da recomendação:**
-- Nenhum achado crítico e poucos importantes → aceitar ou revisão menor.
-- Achados importantes corrigíveis dentro do escopo do estudo → revisão maior.
-- Achado crítico que exige novo estudo (p. ex., avaliação inexistente) → rejeitar ou reenviar como
-  novo trabalho.
+**Recommendation summary:**
+- No critical findings and few major ones → accept or minor revision.
+- Major findings fixable within the scope of the study → major revision.
+- A critical finding that requires a new study (e.g., no evaluation at all) → reject or resubmit as a
+  new work.
 
-Estrutura do parecer em `templates.md` §13.
+Report structure in `templates.md` §13.
 
 ---
 
-## 8. Atribuições trocadas e erros de citação frequentes
+## 8. Misattributions and frequent citation errors
 
-| Conceito | Fonte correta | Erro comum |
+| Concept | Correct source | Common error |
 |---|---|---|
-| Sete diretrizes de DSR | Hevner, March, Park & Ram (2004), *MIS Quarterly* 28(1) | Atribuir a Peffers et al. ou a Hevner (2007) |
-| Três ciclos (relevância, design, rigor) | Hevner (2007), *Scandinavian Journal of Information Systems* 19(2) | Atribuir a Hevner et al. (2004) |
-| DSRM (seis atividades, pontos de entrada) | Peffers, Tuunanen, Rothenberger & Chatterjee (2007), *JMIS* 24(3) | "DSRM de Hevner" |
-| Construtos, modelos, métodos, instanciações | March & Smith (1995) | Citar só Hevner et al. (2004), que adotam a tipologia citando March & Smith |
-| Melhoria, invenção, exaptação, design rotineiro; níveis 1–3 | Gregor & Hevner (2013) | Atribuir a Hevner et al. (2004) |
-| FEDS e as quatro estratégias | Venable, Pries-Heje & Baskerville (2016), *EJIS* 25(1) | Citar o framework de 2012 ou as estratégias de 2008 como FEDS |
-| Ex ante / ex post; artificial / naturalística | Pries-Heje, Baskerville & Venable (2008); Venable et al. (2012) | Atribuir a Hevner |
-| ADR (estágios e sete princípios) | Sein, Henfridsson, Purao, Rossi & Lindgren (2011) | Atribuir a Hevner; confundir com pesquisa-ação clássica |
+| Seven DSR guidelines | Hevner, March, Park & Ram (2004), *MIS Quarterly* 28(1) | Attributing them to Peffers et al. or to Hevner (2007) |
+| Three cycles (relevance, design, rigor) | Hevner (2007), *Scandinavian Journal of Information Systems* 19(2) | Attributing them to Hevner et al. (2004) |
+| DSRM (six activities, entry points) | Peffers, Tuunanen, Rothenberger & Chatterjee (2007), *JMIS* 24(3) | "Hevner's DSRM" |
+| Constructs, models, methods, instantiations | March & Smith (1995) | Citing only Hevner et al. (2004), who adopt the typology citing March & Smith |
+| Improvement, invention, exaptation, routine design; levels 1–3 | Gregor & Hevner (2013) | Attributing them to Hevner et al. (2004) |
+| FEDS and its four strategies | Venable, Pries-Heje & Baskerville (2016), *EJIS* 25(1) | Citing the 2012 framework or the 2008 strategies as FEDS |
+| Ex ante / ex post; artificial / naturalistic | Pries-Heje, Baskerville & Venable (2008); Venable et al. (2012) | Attributing them to Hevner |
+| ADR (stages and seven principles) | Sein, Henfridsson, Purao, Rossi & Lindgren (2011) | Attributing it to Hevner; confusing it with classic action research |
 | eADR | Mullarkey & Hevner (2019) | — |
-| Oito componentes da teoria de design | Gregor & Jones (2007) | Confundir com ISDT de Walls et al. (1992) |
-| Anatomia de princípio de design | Gregor, Chandra Kruse & Seidel (2020) | — |
-| Regra tecnológica | van Aken (2004) | Atribuir à engenharia de software em geral |
+| Eight components of a design theory | Gregor & Jones (2007) | Confusing them with the ISDT of Walls et al. (1992) |
+| Anatomy of a design principle | Gregor, Chandra Kruse & Seidel (2020) | — |
+| Technological rule | van Aken (2004) | Attributing it to software engineering in general |
 | CIMO | Denyer, Tranfield & van Aken (2008) | — |
-| Ciclo de design e ciclo de engenharia; problemas de design vs. questões de conhecimento | Wieringa (2014) | — |
+| Design cycle and engineering cycle; design problems vs. knowledge questions | Wieringa (2014) | — |
 | DSR Grid | vom Brocke & Maedche (2019) | — |
-| *The Sciences of the Artificial* | Simon — 1ª ed. 1969; 3ª ed. 1996 | Citar ano de uma edição com a paginação de outra |
+| *The Sciences of the Artificial* | Simon — 1st ed. 1969; 3rd ed. 1996 | Citing the year of one edition with the pagination of another |
 
-Outros cuidados: confirme páginas, volume e número em `bibliography.md`; não use DOI de capítulo
-para citar o livro inteiro (e vice-versa); indique a edição usada.
+Other checks: confirm pages, volume, and issue in `bibliography.md`; do not use a chapter DOI to cite
+the whole book (or vice versa); state the edition used.
 
 ---
 
-## 9. Críticas frequentes de revisores e como responder
+## 9. Frequent reviewer criticisms and how to respond
 
-| Crítica | O que geralmente está por trás | Como responder (e o que mudar) |
+| Criticism | What usually lies behind it | How to respond (and what to change) |
 |---|---|---|
-| "É só engenharia ou desenvolvimento" | Conhecimento de design implícito; novidade não posicionada | Explicitar princípios ou regras; posicionar na matriz de Gregor & Hevner; comparar com soluções anteriores |
-| "A avaliação é fraca" | Só demonstração ou só percepção; sem baseline | Adicionar episódio somativo; justificar a estratégia FEDS; incluir baseline e ameaças; se não for possível, reduzir as afirmações |
-| "Não há contribuição teórica" | Venue espera abstração | Abstrair princípios com justificativa; argumentar com Baskerville et al. (2018) quando o artefato é a contribuição; ou mudar de venue |
-| "Os resultados não generalizam" | Contexto único; classe de problemas vaga | Condições de contorno; explicação por mecanismos; contexto adicional se viável; linguagem calibrada |
-| "Por que DSR e não outro método?" | Pergunta não formulada como prescritiva | Reformular a questão; justificar pela natureza do problema |
-| "Os requisitos parecem arbitrários" | Origem não documentada | Tabela de requisitos com fontes; matriz de rastreabilidade |
-| "O pesquisador avaliou o próprio artefato" | Risco de viés | Relatar mitigação; avaliadores independentes; dados brutos; limiares definidos antes |
-| "O artefato não está descrito o suficiente" | Descrição narrativa sem especificação | Especificação, modelos, pseudocódigo, repositório |
-| "Frameworks citados sem uso" | Salada de frameworks | Dizer o que cada framework organiza e onde aparece; remover o que não é usado |
+| "This is just engineering or development" | Implicit design knowledge; novelty not positioned | Make principles or rules explicit; position in the Gregor & Hevner framework; compare with prior solutions |
+| "The evaluation is weak" | Demonstration or perception only; no baseline | Add a summative episode; justify the FEDS strategy; include baseline and threats; if impossible, scale down the claims |
+| "There is no theoretical contribution" | Venue expects abstraction | Abstract principles with justification; argue with Baskerville et al. (2018) when the artifact is the contribution; or change venue |
+| "The results do not generalize" | Single context; vague class of problems | Boundary conditions; mechanism-based explanation; additional context if feasible; calibrated language |
+| "Why DSR and not another method?" | Question not phrased as prescriptive | Rephrase the question; justify by the nature of the problem |
+| "The requirements look arbitrary" | Sources not documented | Requirements table with sources; traceability matrix |
+| "The researcher evaluated their own artifact" | Risk of bias | Report mitigation; independent evaluators; raw data; thresholds defined in advance |
+| "The artifact is not described in enough detail" | Narrative description without specification | Specification, models, pseudocode, repository |
+| "Frameworks cited but not used" | Framework salad | State what each framework organizes and where it appears; remove what is unused |
 
-### Carta de resposta
-1. Agradecimento breve e resumo das principais mudanças.
-2. Para cada comentário: transcrição ou resumo do comentário → resposta → mudança feita, com
-   localização (seção, página, tabela).
-3. Quando discordar: reconheça a preocupação, apresente evidência ou literatura, e mostre o que foi
-   ajustado para evitar o mal-entendido.
-4. Não prometa mudanças que não estão no texto revisado.
+### Response letter
+1. Brief thanks and a summary of the main changes.
+2. For each comment: quote or summary of the comment → response → change made, with location
+   (section, page, table).
+3. When disagreeing: acknowledge the concern, present evidence or literature, and show what was
+   adjusted to avoid the misunderstanding.
+4. Do not promise changes that are not in the revised text.

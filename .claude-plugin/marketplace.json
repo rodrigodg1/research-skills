@@ -4,16 +4,16 @@
     "name": "rodrigodg1"
   },
   "metadata": {
-    "description": "Skills do Claude para pesquisa acadêmica: metodologia, escrita e revisão científica.",
-    "version": "1.0.0"
+    "description": "Claude skills for academic research: methodology, scientific writing, and review.",
+    "version": "1.1.0"
   },
   "plugins": [
     {
       "name": "design-science-research",
-      "description": "Especialista em Design Science Research (DSR): planejamento, processo (DSRM, ADR, Wieringa, Dresch et al.), princípios e teorias de design, avaliação com FEDS, escrita de artigos e teses e revisão de manuscritos.",
+      "description": "Design Science Research (DSR) expert: planning, processes (DSRM, ADR, Wieringa, Dresch et al.), design principles and theories, FEDS evaluation, paper and thesis writing, and manuscript review.",
       "source": "./",
       "strict": false,
-      "version": "1.0.0",
+      "version": "1.1.0",
       "category": "research",
       "keywords": [
         "design science research",

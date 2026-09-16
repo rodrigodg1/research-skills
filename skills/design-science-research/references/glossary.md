@@ -1,64 +1,65 @@
-# Glossário DSR — português e inglês
+# DSR glossary
 
-Na primeira ocorrência em texto em português, use o termo em português seguido do inglês entre
-parênteses e em itálico; depois, mantenha só o termo em português.
+Short definitions of core DSR terms. The Portuguese column gives commonly used equivalents for
+writing in Portuguese; when writing in another language, give the English term in parentheses on
+first use.
 
-| Português | Inglês | Definição curta |
+| Term | Portuguese | Short definition |
 |---|---|---|
-| Ablação (estudo de) | Ablation study | Remover ou desativar componentes do artefato para medir sua contribuição ao efeito |
-| Ambiente (de aplicação) | Environment | Pessoas, organizações, tecnologia e problemas em que o artefato atua |
-| Ambiente interno / externo | Inner / outer environment | Organização do artefato / contexto em que opera (Simon) |
-| Artefato | Artifact | Objeto projetado pelo ser humano para resolver um problema: construto, modelo, método, instanciação ou princípios e teorias de design |
-| Avaliação artificial | Artificial evaluation | Avaliação em que usuários, sistema ou problema não são reais |
-| Avaliação ex ante / ex post | Ex ante / ex post evaluation | Antes / depois de construir ou instanciar o artefato |
-| Avaliação formativa | Formative evaluation | Avaliação para melhorar o artefato durante o design |
-| Avaliação naturalística | Naturalistic evaluation | Avaliação com pessoas, sistemas e problemas reais |
-| Avaliação somativa | Summative evaluation | Avaliação para julgar o resultado final |
-| Base de conhecimento | Knowledge base | Teorias, métodos, experiência e artefatos existentes |
-| Busca (design como) | Design as a search process | Exploração de alternativas até uma solução satisfatória |
-| Ciclo de design | Design cycle | Iteração entre construção e avaliação |
-| Ciclo de mudança e impacto | Change and impact cycle | Quarto ciclo: evolução do artefato em ambiente dinâmico |
-| Ciclo de relevância | Relevance cycle | Ligação entre ambiente e pesquisa: requisitos e teste de campo |
-| Ciclo de rigor | Rigor cycle | Ligação entre base de conhecimento e pesquisa |
-| Classe de problemas | Class of problems | Conjunto de situações semelhantes às quais o conhecimento se aplica |
-| Condições de contorno | Boundary conditions | Condições em que um princípio ou resultado vale |
-| Conhecimento descritivo (Ω) | Descriptive knowledge (omega) | Conhecimento sobre fenômenos e suas regularidades |
-| Conhecimento prescritivo (Λ) | Prescriptive knowledge (lambda) | Conhecimento sobre artefatos e como fazer |
-| Conhecimento justificatório | Justificatory knowledge | Conhecimento que explica por que o design deve funcionar |
-| Construto | Construct | Vocabulário e conceitos para descrever problemas e soluções |
-| Demonstração | Demonstration | Uso do artefato numa instância para mostrar viabilidade |
-| Design rotineiro | Routine design | Solução conhecida aplicada a problema conhecido |
-| Eficácia | Efficacy | Efeito produzido pelo artefato em condições controladas, atribuível a ele |
-| Efetividade | Effectiveness | Efeito do artefato em situações reais |
-| Eficiência | Efficiency | Relação entre resultados e recursos |
-| Emergência guiada | Guided emergence | Princípio de ADR: o artefato é moldado pelo uso e pela avaliação |
-| Episódio de avaliação | Evaluation episode | Uma atividade de avaliação específica na trajetória |
-| Exaptação | Exaptation | Solução conhecida estendida a problema novo |
-| Instanciação | Instantiation | Realização concreta do artefato, como um sistema ou protótipo |
-| Instanciação expositiva | Expository instantiation | Implementação que ilustra e permite testar uma teoria de design |
-| Invenção | Invention | Solução nova para problema novo |
-| Melhoria | Improvement | Solução nova para problema conhecido |
-| Meta-artefato | Meta-artifact | Artefato em nível de classe (conceito geral de solução) |
-| Meta-design | Meta-design | Classe de artefatos que atende aos meta-requisitos |
-| Meta-requisito | Meta-requirement | Requisito em nível de classe de problemas |
-| Método | Method | Passos para executar uma tarefa |
-| Modelo | Model | Proposições que relacionam construtos |
-| Mutabilidade do artefato | Artifact mutability | Mudanças de estado ou adaptações previstas para o artefato |
-| Pesquisa-ação de design | Action Design Research (ADR) | DSR com intervenção em contexto organizacional |
-| Pesquisa-ação técnica | Technical Action Research (TAR) | Uso do artefato para ajudar um cliente real como forma de validação |
-| Princípio de design | Design principle | Enunciado prescritivo transferível a uma classe de problemas |
-| Princípios de forma e função | Principles of form and function | Projeto abstrato do artefato numa teoria de design |
-| Princípios de implementação | Principles of implementation | Como implantar o artefato em contextos específicos |
-| Problema de design | Design problem | Problema que pede mudança no mundo; resposta é um artefato |
-| Proposição testável | Testable proposition | Afirmação verificável sobre efeitos do artefato |
-| Questão de conhecimento | Knowledge question | Pergunta sobre o mundo; resposta é conhecimento |
-| Regra tecnológica | Technological rule | "Para alcançar Y em Z, aplique algo como X" |
-| Satisfazimento | Satisficing | Busca de solução satisfatória em vez de ótima (Simon) |
-| Teoria de base | Kernel theory | Teoria de outras áreas que fundamenta o design |
-| Teoria de design | Design theory | Teoria prescritiva sobre como construir uma classe de artefatos |
-| Teoria de design nascente | Nascent design theory | Nível 2: princípios operacionais, modelos, métodos |
-| Tratamento | Treatment | Interação entre artefato e contexto que produz efeitos (Wieringa) |
-| Trajetória de avaliação | Evaluation trajectory | Sequência de episódios no plano formativo–somativo × artificial–naturalístico |
-| Utilidade | Utility | Valor do artefato para atingir objetivos de stakeholders |
-| Validação (Wieringa) | Validation | Previsão dos efeitos do artefato em contexto antes da implantação |
-| Validade de instanciação | Instantiation validity | Quanto a instância representa fielmente o artefato abstrato |
+| Ablation study | Estudo de ablação | Removing or disabling artifact components to measure their contribution to the effect |
+| Action Design Research (ADR) | Pesquisa-ação de design | DSR with intervention in an organizational context |
+| Artifact | Artefato | Human-made object designed to solve a problem: construct, model, method, instantiation, or design principles and theories |
+| Artifact mutability | Mutabilidade do artefato | State changes or adaptations anticipated for the artifact |
+| Artificial evaluation | Avaliação artificial | Evaluation in which users, system, or problem are not real |
+| Boundary conditions | Condições de contorno | Conditions under which a principle or result holds |
+| Change and impact cycle | Ciclo de mudança e impacto | Fourth cycle: evolution of the artifact in a dynamic environment |
+| Class of problems | Classe de problemas | Set of similar situations to which the knowledge applies |
+| Construct | Construto | Vocabulary and concepts for describing problems and solutions |
+| Demonstration | Demonstração | Use of the artifact on one instance to show feasibility |
+| Descriptive knowledge (Ω, omega) | Conhecimento descritivo | Knowledge about phenomena and their regularities |
+| Design as a search process | Design como processo de busca | Exploring alternatives until a satisfactory solution is reached |
+| Design cycle | Ciclo de design | Iteration between building and evaluating |
+| Design principle | Princípio de design | Prescriptive statement transferable to a class of problems |
+| Design problem | Problema de design | Problem that calls for a change in the world; the answer is an artifact |
+| Design theory | Teoria de design | Prescriptive theory about how to build a class of artifacts |
+| Effectiveness | Efetividade | Effect of the artifact in real situations |
+| Efficacy | Eficácia | Effect produced by the artifact under controlled conditions, attributable to it |
+| Efficiency | Eficiência | Ratio between results and resources |
+| Environment (application) | Ambiente (de aplicação) | People, organizations, technology, and problems in which the artifact operates |
+| Evaluation episode | Episódio de avaliação | One specific evaluation activity in the trajectory |
+| Evaluation trajectory | Trajetória de avaliação | Sequence of episodes in the formative–summative × artificial–naturalistic plane |
+| Ex ante / ex post evaluation | Avaliação ex ante / ex post | Before / after building or instantiating the artifact |
+| Exaptation | Exaptação | Known solution extended to a new problem |
+| Expository instantiation | Instanciação expositiva | Implementation that illustrates a design theory and allows it to be tested |
+| Formative evaluation | Avaliação formativa | Evaluation to improve the artifact during design |
+| Guided emergence | Emergência guiada | ADR principle: the artifact is shaped by use and evaluation |
+| Improvement | Melhoria | New solution for a known problem |
+| Inner / outer environment | Ambiente interno / externo | The artifact's organization / the context in which it operates (Simon) |
+| Instantiation | Instanciação | Concrete realization of the artifact, such as a system or prototype |
+| Instantiation validity | Validade de instanciação | Extent to which the instance faithfully represents the abstract artifact |
+| Invention | Invenção | New solution for a new problem |
+| Justificatory knowledge | Conhecimento justificatório | Knowledge explaining why the design should work |
+| Kernel theory | Teoria de base | Theory from other fields that grounds the design |
+| Knowledge base | Base de conhecimento | Existing theories, methods, experience, and artifacts |
+| Knowledge question | Questão de conhecimento | Question about the world; the answer is knowledge |
+| Meta-artifact | Meta-artefato | Class-level artifact (general solution concept) |
+| Meta-design | Meta-design | Class of artifacts that meets the meta-requirements |
+| Meta-requirement | Meta-requisito | Requirement at the level of a class of problems |
+| Method | Método | Steps for performing a task |
+| Model | Modelo | Propositions relating constructs |
+| Nascent design theory | Teoria de design nascente | Level 2: operational principles, models, methods |
+| Naturalistic evaluation | Avaliação naturalística | Evaluation with real people, systems, and problems |
+| Prescriptive knowledge (Λ, lambda) | Conhecimento prescritivo | Knowledge about artifacts and how to do things |
+| Principles of form and function | Princípios de forma e função | The abstract blueprint of the artifact in a design theory |
+| Principles of implementation | Princípios de implementação | How to implement the artifact in specific contexts |
+| Relevance cycle | Ciclo de relevância | Link between environment and research: requirements and field testing |
+| Rigor cycle | Ciclo de rigor | Link between the knowledge base and research |
+| Routine design | Design rotineiro | Known solution applied to a known problem |
+| Satisficing | Satisfazimento | Seeking a satisfactory rather than optimal solution (Simon) |
+| Summative evaluation | Avaliação somativa | Evaluation to judge the final outcome |
+| Technical Action Research (TAR) | Pesquisa-ação técnica | Using the artifact to help a real client as a form of validation |
+| Technological rule | Regra tecnológica | "To achieve Y in Z, apply something like X" |
+| Testable proposition | Proposição testável | Verifiable statement about the artifact's effects |
+| Treatment | Tratamento | Interaction between artifact and context that produces effects (Wieringa) |
+| Utility | Utilidade | Value of the artifact for achieving stakeholder goals |
+| Validation (Wieringa) | Validação | Predicting the artifact's effects in context before implementation |

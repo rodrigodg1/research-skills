@@ -1,395 +1,389 @@
-# Processos e frameworks de DSR
+# DSR processes and frameworks
 
-Conteúdo parafraseado das fontes originais. Ao escrever texto acadêmico, cite a fonte primária
-(ver `bibliography.md`) e deixe claro quando houver adaptação.
+Content paraphrased from the original sources. When writing academic text, cite the primary source
+(see `bibliography.md`) and make any adaptation explicit.
 
-## Sumário
-1. Fundamentos: ciências do artificial e paradigma de design
-2. Hevner et al. (2004): sete diretrizes
-3. Hevner (2007): três ciclos; Drechsler & Hevner (2016): quarto ciclo
+## Contents
+1. Foundations: sciences of the artificial and the design paradigm
+2. Hevner et al. (2004): seven guidelines
+3. Hevner (2007): three cycles; Drechsler & Hevner (2016): fourth cycle
 4. Peffers et al. (2007): Design Science Research Methodology (DSRM)
-5. Vaishnavi & Kuechler: ciclo geral de design
-6. Wieringa (2014): ciclo de design e ciclo de engenharia
-7. Action Design Research (Sein et al., 2011) e eADR (Mullarkey & Hevner, 2019)
+5. Vaishnavi & Kuechler: general design cycle
+6. Wieringa (2014): design cycle and engineering cycle
+7. Action Design Research (Sein et al., 2011) and eADR (Mullarkey & Hevner, 2019)
 8. Dresch, Lacerda & Antunes Jr. (2015)
-9. Duas estratégias de DSR (Iivari, 2015)
-10. DSR em engenharia de software e computação
-11. Como escolher e combinar
-12. Tabela de equivalências
+9. Two DSR strategies (Iivari, 2015)
+10. DSR in software engineering and computer science
+11. How to choose and combine
+12. Crosswalk table
 
 ---
 
-## 1. Fundamentos
+## 1. Foundations
 
-**Ciências do artificial (Simon, 1996).** As ciências naturais descrevem como as coisas são; as
-ciências do artificial tratam de como as coisas deveriam ser para atingir objetivos. Projetar é
-conceber cursos de ação que transformam situações existentes em situações preferidas. Um
-artefato é a interface entre um *ambiente interno* (sua organização e substância) e um *ambiente
-externo* (o contexto em que opera). Em problemas complexos, busca-se uma solução satisfatória
-(*satisficing*), não necessariamente ótima.
+**Sciences of the artificial (Simon, 1996).** Natural sciences describe how things are; sciences of
+the artificial deal with how things ought to be in order to attain goals. Designing is devising
+courses of action that turn existing situations into preferred ones. An artifact is the interface
+between an *inner environment* (its substance and organization) and an *outer environment* (the
+surroundings in which it operates). For complex problems, one seeks a satisfactory solution
+(*satisficing*), not necessarily an optimal one.
 
-**Paradigmas complementares (Hevner et al., 2004).** A pesquisa comportamental busca verdade:
-desenvolver e justificar teorias que explicam ou predizem fenômenos. DSR busca utilidade:
-construir e avaliar artefatos. Os dois se alimentam: teorias informam o design, e artefatos em
-uso geram fenômenos a explicar.
+**Complementary paradigms (Hevner et al., 2004).** Behavioral science seeks truth: developing and
+justifying theories that explain or predict phenomena. DSR seeks utility: building and evaluating
+artifacts. The two feed each other: theories inform design, and artifacts in use create phenomena
+to explain.
 
-**Saídas e atividades (March & Smith, 1995).** Quatro tipos de saída (construtos, modelos,
-métodos, instanciações) cruzados com quatro atividades (construir, avaliar, teorizar,
-justificar). As duas primeiras são típicas de design science; as duas últimas, de ciência
-natural. Detalhes em `contributions-and-theory.md` §1.
+**Outputs and activities (March & Smith, 1995).** Four output types (constructs, models, methods,
+instantiations) crossed with four activities (build, evaluate, theorize, justify). The first two
+activities are typical of design science; the last two, of natural science. Details in
+`contributions-and-theory.md` §1.
 
-**Precursor em SI.** Nunamaker et al. (1990) defenderam o desenvolvimento de sistemas como
-metodologia de pesquisa, antecipando vários elementos da DSR.
+**Precursor in IS.** Nunamaker et al. (1990) argued for systems development as a research
+methodology, anticipating many elements of DSR.
 
-**Princípios do memorando alemão (Österle et al., 2011).** Pesquisa orientada a design deve
-atender a quatro princípios: *abstração* (aplicável a uma classe de problemas), *originalidade*
-(contribui para o corpo de conhecimento), *justificação* (validável de forma compreensível) e
-*benefício* (gera valor para stakeholders, hoje ou no futuro).
+**Principles from the German memorandum (Österle et al., 2011).** Design-oriented research should
+meet four principles: *abstraction* (applicable to a class of problems), *originality* (adds to the
+body of knowledge), *justification* (can be validated in a comprehensible way), and *benefit*
+(creates value for stakeholders, now or in the future).
 
-**Postura epistemológica.** DSR costuma ser associada ao pragmatismo: conhecimento válido é o que
-funciona para resolver problemas, e aprende-se construindo e avaliando. Declare a postura na
-metodologia apenas se o público espera (comum em teses e em SI).
+**Epistemological stance.** DSR is commonly associated with pragmatism: valid knowledge is what
+works to solve problems, and one learns by building and evaluating. State the stance in the
+methodology only if the audience expects it (common in theses and in IS).
 
-**Terminologia.** Evite usar indistintamente *design science* (o paradigma e o corpo de
-conhecimento), *design science research* (a atividade de pesquisa) e *design research* (que em
-algumas áreas significa pesquisa sobre o processo de design). Dresch et al. (2015) distinguem
-explicitamente design science (base epistemológica) de design science research (método que a
-operacionaliza).
+**Terminology.** Avoid using interchangeably *design science* (the paradigm and body of knowledge),
+*design science research* (the research activity), and *design research* (which in some fields
+means research about the design process). Dresch et al. (2015) explicitly distinguish design science
+(the epistemological basis) from design science research (the method that operationalizes it).
 
 ---
 
-## 2. Hevner et al. (2004): sete diretrizes
+## 2. Hevner et al. (2004): seven guidelines
 
-Os autores apresentam as diretrizes como apoio ao julgamento de pesquisadores, revisores e
-editores, não como checklist obrigatório. Use-as para *examinar* um projeto, não para
-*declarar* conformidade.
+The authors present the guidelines as support for the judgment of researchers, reviewers, and
+editors, not as a mandatory checklist. Use them to *examine* a project, not to *declare*
+compliance.
 
-| # | Diretriz | O que pede (paráfrase) | O que evidenciar | Falha típica |
+| # | Guideline | What it asks (paraphrase) | What to evidence | Typical failure |
 |---|---|---|---|---|
-| 1 | Design como artefato | Produzir um artefato viável: construto, modelo, método ou instanciação | Descrição reproduzível; artefato efetivamente construído | Ideia ou esboço apresentado como artefato |
-| 2 | Relevância do problema | Soluções para problemas importantes e relevantes | Stakeholders; dados; custo do problema; lacuna das soluções atuais | Problema inventado para caber na solução |
-| 3 | Avaliação do design | Utilidade, qualidade e eficácia demonstradas com métodos bem executados | Estratégia, critérios, métricas, baseline, resultados | Evidência anedótica ou só demonstração |
-| 4 | Contribuições de pesquisa | Contribuições claras e verificáveis no artefato, nos fundamentos de design ou nas metodologias de design | Declaração de contribuição comparada ao estado da arte | "Contribuição" = ter construído algo |
-| 5 | Rigor da pesquisa | Métodos rigorosos na construção e na avaliação | Fundamentação na base de conhecimento; métodos de avaliação adequados | Rigor só na avaliação, design arbitrário |
-| 6 | Design como busca | Usar meios disponíveis para atingir fins desejados, respeitando as leis do ambiente | Alternativas, iterações, heurísticas, trade-offs | Solução apresentada como óbvia e única |
-| 7 | Comunicação | Apresentar a públicos orientados a tecnologia e a gestão | Detalhe técnico suficiente e implicações práticas | Texto só técnico ou só gerencial |
+| 1 | Design as an artifact | Produce a viable artifact: construct, model, method, or instantiation | Reproducible description; artifact actually built | Idea or sketch presented as an artifact |
+| 2 | Problem relevance | Solutions to important and relevant problems | Stakeholders; data; cost of the problem; gap in current solutions | Problem invented to fit the solution |
+| 3 | Design evaluation | Utility, quality, and efficacy demonstrated with well-executed methods | Strategy, criteria, metrics, baseline, results | Anecdotal evidence or demonstration only |
+| 4 | Research contributions | Clear, verifiable contributions in the artifact, design foundations, or design methodologies | Contribution statement compared with the state of the art | "Contribution" = having built something |
+| 5 | Research rigor | Rigorous methods in both construction and evaluation | Grounding in the knowledge base; appropriate evaluation methods | Rigor only in evaluation, arbitrary design |
+| 6 | Design as a search process | Use available means to reach desired ends while satisfying laws of the environment | Alternatives, iterations, heuristics, trade-offs | Solution presented as obvious and unique |
+| 7 | Communication of research | Present to technology-oriented and management-oriented audiences | Enough technical detail and practical implications | Text only technical or only managerial |
 
-Os métodos de avaliação propostos no mesmo artigo estão em `evaluation.md` §1.
+The evaluation methods proposed in the same paper are in `evaluation.md` §1.
 
 ---
 
-## 3. Três ciclos (Hevner, 2007) e quarto ciclo (Drechsler & Hevner, 2016)
+## 3. Three cycles (Hevner, 2007) and a fourth cycle (Drechsler & Hevner, 2016)
 
-**Ciclo de relevância.** Liga o ambiente de aplicação (pessoas, sistemas organizacionais,
-sistemas técnicos, problemas e oportunidades) à pesquisa. Traz requisitos e critérios de
-aceitação; leva o artefato de volta ao ambiente para teste de campo. Se o teste de campo revela
-deficiências, inicia-se nova iteração.
+**Relevance cycle.** Connects the application environment (people, organizational systems,
+technical systems, problems and opportunities) to the research. Brings in requirements and
+acceptance criteria; takes the artifact back into the environment for field testing. If field
+testing reveals deficiencies, a new iteration begins.
 
-**Ciclo de rigor.** Liga a pesquisa à base de conhecimento. Traz teorias e métodos científicos,
-experiência e expertise do domínio e artefatos ou processos de design existentes. Devolve à base
-extensões de teorias e métodos, novos meta-artefatos (produtos e processos de design) e
-experiência. Hevner enfatiza que o pesquisador precisa demonstrar que o artefato é de fato novo,
-e não aplicação rotineira de conhecimento conhecido.
+**Rigor cycle.** Connects the research to the knowledge base. Brings in scientific theories and
+methods, domain experience and expertise, and existing design artifacts and processes. Returns
+extensions to theories and methods, new meta-artifacts (design products and processes), and
+experience. Hevner stresses that the researcher must show the artifact is genuinely new, not a
+routine application of known knowledge.
 
-**Ciclo de design.** O núcleo: iteração rápida entre construir e avaliar alternativas até obter
-um design satisfatório. O esforço deve se equilibrar entre construção e avaliação; ambos
-precisam estar fundamentados nos outros dois ciclos.
+**Design cycle.** The core: rapid iteration between building and evaluating alternatives until a
+satisfactory design is reached. Effort should be balanced between construction and evaluation; both
+must be grounded in the other two cycles.
 
-**Como usar na escrita.** Uma tabela que mostre, para cada ciclo, o que entrou e o que saiu do
-projeto é uma forma compacta de demonstrar relevância e rigor:
+**How to use it in writing.** A table showing what each cycle brought into the project and what the
+project gave back is a compact way to demonstrate relevance and rigor:
 
-| Ciclo | Entradas no projeto | Saídas do projeto |
+| Cycle | Inputs to the project | Outputs of the project |
 |---|---|---|
-| Relevância | Problema, stakeholders, requisitos, critérios de aceitação | Artefato testado em campo; evidências de utilidade |
-| Rigor | Teorias de base, métodos, artefatos anteriores | Princípios de design, extensões de teoria, novos métodos |
-| Design | Alternativas, protótipos, avaliações formativas | Artefato final; histórico de iterações |
+| Relevance | Problem, stakeholders, requirements, acceptance criteria | Field-tested artifact; evidence of utility |
+| Rigor | Kernel theories, methods, prior artifacts | Design principles, theory extensions, new methods |
+| Design | Alternatives, prototypes, formative evaluations | Final artifact; iteration history |
 
-**Quarto ciclo — mudança e impacto (Drechsler & Hevner, 2016).** Acrescenta um ciclo que liga o
-contexto imediato de aplicação a um ambiente mais amplo e dinâmico. Captura a necessidade de o
-artefato evoluir quando o ambiente muda e os efeitos que o próprio artefato provoca na
-organização, gerando novos esforços de design. Útil para plataformas, sistemas de longa duração,
-ecossistemas e ambientes voláteis.
+**Fourth cycle — change and impact (Drechsler & Hevner, 2016).** Adds a cycle connecting the
+immediate application context to a broader, dynamic environment. It captures the need for the
+artifact to evolve as the environment changes, and the effects the artifact itself produces in the
+organization, which trigger further design efforts. Useful for platforms, long-lived systems,
+ecosystems, and volatile environments.
 
 ---
 
 ## 4. DSRM (Peffers et al., 2007)
 
-Processo nominal em seis atividades, com retornos iterativos da avaliação e da comunicação para
-a definição de objetivos e para o projeto.
+A nominal process of six activities, with iterative loops from evaluation and communication back
+to defining objectives and to design.
 
-### Atividade 1 — Identificação do problema e motivação
-Definir o problema de pesquisa específico e justificar o valor de uma solução. Decompor o
-problema conceitualmente ajuda a solução a capturar sua complexidade. Recursos: conhecimento do
-estado do problema e da importância de resolvê-lo.
-**Na tese:** capítulo de introdução e, se houver, estudo exploratório do problema.
+### Activity 1 — Problem identification and motivation
+Define the specific research problem and justify the value of a solution. Breaking the problem down
+conceptually helps the solution capture its complexity. Resources: knowledge of the state of the
+problem and the importance of its solution.
+**In a thesis:** introduction chapter and, if present, an exploratory study of the problem.
 
-### Atividade 2 — Definição dos objetivos da solução
-Inferir objetivos a partir da definição do problema e do conhecimento sobre o que é possível e
-viável. Objetivos podem ser **quantitativos** (em que termos a nova solução seria melhor que as
-atuais) ou **qualitativos** (como o artefato apoiará soluções para problemas ainda não
-tratados). Recursos: conhecimento sobre soluções atuais e sua eficácia.
-**Na tese:** requisitos e objetivos de design, com origem rastreável.
+### Activity 2 — Define the objectives for a solution
+Infer objectives from the problem definition and from knowledge of what is possible and feasible.
+Objectives can be **quantitative** (in what terms the new solution would be better than current
+ones) or **qualitative** (how the artifact will support solutions to problems not yet addressed).
+Resources: knowledge of current solutions and their efficacy.
+**In a thesis:** requirements and design objectives, with traceable sources.
 
-### Atividade 3 — Projeto e desenvolvimento
-Criar o artefato: determinar funcionalidade e arquitetura desejadas e então construí-lo.
-Recursos: teoria aplicável à solução.
-**Na tese:** capítulo do artefato, com decisões de design e fundamentação.
+### Activity 3 — Design and development
+Create the artifact: determine its desired functionality and architecture, then build it.
+Resources: theory that can be brought to bear on the solution.
+**In a thesis:** the artifact chapter, with design decisions and their grounding.
 
-### Atividade 4 — Demonstração
-Mostrar o uso do artefato para resolver uma ou mais instâncias do problema — por experimento,
-simulação, estudo de caso, prova ou outra atividade apropriada. Recursos: conhecimento de como
-usar o artefato.
+### Activity 4 — Demonstration
+Show the use of the artifact to solve one or more instances of the problem — through
+experimentation, simulation, case study, proof, or another appropriate activity. Resources:
+knowledge of how to use the artifact.
 
-### Atividade 5 — Avaliação
-Observar e medir quão bem o artefato apoia a solução, comparando objetivos com resultados
-observados. Pode incluir comparação de funcionalidades com objetivos, medidas quantitativas de
-desempenho, pesquisas de satisfação, feedback de clientes ou simulações. Ao final, decide-se
-voltar à atividade 2 ou 3 ou seguir para a comunicação.
+### Activity 5 — Evaluation
+Observe and measure how well the artifact supports a solution, comparing objectives with observed
+results. This may include comparing functionality with objectives, quantitative performance
+measures, satisfaction surveys, client feedback, or simulations. At the end, decide whether to
+iterate back to activity 2 or 3 or to move on to communication.
 
-### Atividade 6 — Comunicação
-Comunicar o problema e sua importância, o artefato, sua utilidade e novidade, o rigor do design
-e sua eficácia a pesquisadores e a outros públicos relevantes, como profissionais. Os autores
-sugerem que a estrutura do processo pode organizar artigos acadêmicos, assim como o processo
-empírico nominal organiza artigos empíricos.
+### Activity 6 — Communication
+Communicate the problem and its importance, the artifact, its utility and novelty, the rigor of its
+design, and its effectiveness to researchers and other relevant audiences, such as practitioners.
+The authors suggest that the process structure can organize scholarly papers, just as the nominal
+empirical process structures empirical papers.
 
-### Pontos de entrada
-| Entrada | Começa em | Situação típica |
+### Entry points
+| Entry point | Starts at | Typical situation |
 |---|---|---|
-| Iniciação centrada no problema | Atividade 1 | Problema observado ou sugerido por pesquisa anterior |
-| Solução centrada em objetivos | Atividade 2 | Necessidade da indústria ou da pesquisa que pode ser atendida por um artefato |
-| Iniciação centrada em projeto e desenvolvimento | Atividade 3 | Artefato existente ainda não pensado formalmente como solução para um domínio de problemas |
-| Iniciação pelo cliente ou contexto | Atividade 4 | Solução prática que funcionou; pesquisadores trabalham de trás para frente aplicando rigor |
+| Problem-centered initiation | Activity 1 | Problem observed or suggested by prior research |
+| Objective-centered solution | Activity 2 | Industry or research need that an artifact could address |
+| Design and development-centered initiation | Activity 3 | Existing artifact not yet formally thought through as a solution for a problem domain |
+| Client/context-initiated | Activity 4 | A practical solution that worked; researchers work backward to apply rigor |
 
-Ao usar uma entrada que não seja a atividade 1, diga isso explicitamente na metodologia. É mais
-defensável do que narrar um processo linear que não aconteceu.
+When using an entry point other than activity 1, say so explicitly in the methodology. It is more
+defensible than narrating a linear process that did not happen.
 
 ---
 
-## 5. Ciclo geral de design (Vaishnavi & Kuechler)
+## 5. General design cycle (Vaishnavi & Kuechler)
 
-Derivado de modelos de processo de design em engenharia e adotado por Kuechler & Vaishnavi (2008)
-e Vaishnavi & Kuechler (2015).
+Derived from design process models in engineering and adopted by Kuechler & Vaishnavi (2008) and
+Vaishnavi & Kuechler (2015).
 
-| Fase | Saída |
+| Phase | Output |
 |---|---|
-| Consciência do problema (*awareness of problem*) | Proposta |
-| Sugestão (*suggestion*) | Design tentativo |
-| Desenvolvimento (*development*) | Artefato |
-| Avaliação (*evaluation*) | Medidas de desempenho |
-| Conclusão (*conclusion*) | Resultados |
+| Awareness of problem | Proposal |
+| Suggestion | Tentative design |
+| Development | Artifact |
+| Evaluation | Performance measures |
+| Conclusion | Results |
 
-**Fluxos de conhecimento.** Quando o desenvolvimento ou a avaliação revelam que o artefato não
-se comporta como previsto, gera-se conhecimento de *circunscrição* (*circumscription*): entende-se
-melhor as restrições e os limites da teoria, e o ciclo volta à consciência do problema. Há
-também conhecimento de *operação e objetivo* (*operation and goal knowledge*) produzido ao longo
-do ciclo.
+**Knowledge flows.** When development or evaluation shows that the artifact does not behave as
+expected, *circumscription* knowledge is generated: the constraints and limits of the theory become
+better understood, and the cycle returns to awareness of the problem. *Operation and goal
+knowledge* is also produced along the cycle.
 
-**Ênfase.** Este modelo destaca DSR como geradora e refinadora de teoria: Kuechler & Vaishnavi
-(2008) mostram como um projeto de design pode estender uma teoria de base, e Kuechler &
-Vaishnavi (2012) discutem teorias de design e teorias explicativas relevantes para design.
-A fase de conclusão registra também "pontas soltas" — comportamentos não explicados que viram
-agenda de pesquisa.
+**Emphasis.** This model highlights DSR as a generator and refiner of theory: Kuechler & Vaishnavi
+(2008) show how a design project can extend a kernel theory, and Kuechler & Vaishnavi (2012) discuss
+design theories and explanatory theories relevant to design. The conclusion phase also records
+"loose ends" — unexplained behaviors that become a research agenda.
 
 ---
 
 ## 6. Wieringa (2014)
 
-**Objeto.** Design science é o projeto e a investigação de artefatos *em contexto*. Um artefato
-sozinho não resolve nada; o que produz efeitos é a interação artefato × contexto (o
-*tratamento*).
+**Object.** Design science is the design and investigation of artifacts *in context*. An artifact
+alone solves nothing; what produces effects is the artifact × context interaction (the
+*treatment*).
 
-**Dois tipos de problema — mantenha separados.**
-- **Problemas de design** pedem mudança no mundo; têm muitas soluções possíveis, avaliadas pela
-  utilidade para os objetivos dos stakeholders.
-- **Questões de conhecimento** pedem conhecimento sobre o mundo; têm uma resposta (possivelmente
-  incerta), avaliada pela verdade.
-Um projeto DSR é uma hierarquia de problemas de design e questões de conhecimento aninhados.
-Misturá-los numa única "questão de pesquisa" gera confusão sobre o que conta como resposta.
+**Two kinds of problems — keep them separate.**
+- **Design problems** call for a change in the world; they have many possible solutions, evaluated
+  by their utility for stakeholder goals.
+- **Knowledge questions** ask for knowledge about the world; they have one answer (possibly
+  uncertain), evaluated by truth.
+A DSR project is a hierarchy of nested design problems and knowledge questions. Merging them into a
+single "research question" creates confusion about what counts as an answer.
 
-**Modelo para problema de design (paráfrase):**
-> Melhorar <contexto do problema>
-> por meio de <(re)projeto de um artefato>
-> que satisfaça <requisitos>
-> a fim de <ajudar stakeholders a alcançar objetivos>.
+**Design problem template (paraphrase):**
+> Improve <problem context>
+> by <(re)designing an artifact>
+> that satisfies <requirements>
+> in order to <help stakeholders achieve goals>.
 
-**Ciclo de design.**
-1. *Investigação do problema*: stakeholders, objetivos, fenômenos, causas, mecanismos, efeitos;
-   avaliação da situação atual.
-2. *Projeto do tratamento*: especificar requisitos, examinar tratamentos disponíveis, projetar
-   novos.
-3. *Validação do tratamento*: prever os efeitos do artefato no contexto, antes da implantação
-   real. Questões típicas:
-   - efeito: artefato × contexto → que efeitos? Satisfazem os requisitos?
-   - trade-off: artefatos alternativos × contexto → efeitos?
-   - sensibilidade: artefato × contextos alternativos → efeitos?
+**Design cycle.**
+1. *Problem investigation*: stakeholders, goals, phenomena, causes, mechanisms, effects; evaluation
+   of the current situation.
+2. *Treatment design*: specify requirements, examine available treatments, design new ones.
+3. *Treatment validation*: predict the effects of the artifact in context before real-world
+   implementation. Typical questions:
+   - effect: artifact × context → what effects? Do they satisfy the requirements?
+   - trade-off: alternative artifacts × context → effects?
+   - sensitivity: artifact × alternative contexts → effects?
 
-**Ciclo de engenharia.** Ciclo de design mais *implementação do tratamento* (transferência para
-o mundo real) e *avaliação da implementação* (que funciona como nova investigação de problema).
-DSR acadêmico geralmente vai até a validação; a implementação real costuma ficar fora do escopo.
+**Engineering cycle.** The design cycle plus *treatment implementation* (transfer to the real world)
+and *implementation evaluation* (which works as a new problem investigation). Academic DSR usually
+goes as far as validation; real implementation is often out of scope.
 
-**Métodos de validação.**
-| Método | Descrição | Quando usar |
+**Validation methods.**
+| Method | Description | When to use |
 |---|---|---|
-| Opinião de especialistas | Especialistas preveem efeitos do artefato no contexto | Cedo; barato; não substitui testes |
-| Experimento de mecanismo em caso único | Protótipo testado em contexto simulado; comportamento explicado por mecanismos | Artefatos técnicos; engenharia de software |
-| Pesquisa-ação técnica (TAR) | Pesquisador usa o artefato para ajudar um cliente real e aprende com isso | Transição do laboratório para a prática |
-| Experimento estatístico de diferença | Grupos com e sem tratamento comparados estatisticamente | Quando há amostra suficiente e controle |
+| Expert opinion | Experts predict the artifact's effects in context | Early; cheap; does not replace testing |
+| Single-case mechanism experiment | Prototype tested in a simulated context; behavior explained by mechanisms | Technical artifacts; software engineering |
+| Technical action research (TAR) | Researcher uses the artifact to help a real client and learns from it | Transition from lab to practice |
+| Statistical difference-making experiment | Groups with and without the treatment compared statistically | When sample size and control are sufficient |
 
-Na TAR (Wieringa & Moralı, 2012), o pesquisador acumula papéis — projetista do artefato,
-pesquisador empírico que responde a questões de conhecimento e ajudante do cliente — e precisa
-separá-los conscientemente.
+In TAR (Wieringa & Moralı, 2012), the researcher holds several roles — designer of the artifact,
+empirical researcher answering knowledge questions, and helper of the client — and must keep them
+consciously separate.
 
-**Generalização.** Por analogia, com base em semelhança de arquitetura entre casos (mesmos
-componentes e mecanismos), e por ampliação gradual das condições: do laboratório a condições
-cada vez mais realistas (*scaling up*).
+**Generalization.** By analogy, based on architectural similarity between cases (same components and
+mechanisms), and by gradually widening conditions: from the lab to increasingly realistic conditions
+(*scaling up*).
 
-**Atenção terminológica.** Em Wieringa, *validação* ocorre antes da implantação e *avaliação* é
-da implementação real. Em Peffers et al. (2007), *avaliação* cobre ambos. Defina os termos no
-texto.
+**Terminology warning.** In Wieringa, *validation* happens before implementation and *evaluation*
+concerns the real implementation. In Peffers et al. (2007), *evaluation* covers both. Define the
+terms in the text.
 
 ---
 
 ## 7. Action Design Research
 
 ### ADR (Sein et al., 2011)
-**Motivação.** Artefatos de TI são moldados pelo contexto organizacional durante o
-desenvolvimento e o uso. Separar "construir" e "avaliar" em etapas estanques ignora isso; ADR
-entrelaça construção, intervenção e avaliação.
+**Motivation.** IT artifacts are shaped by their organizational context during development and use.
+Separating "build" and "evaluate" into watertight stages ignores this; ADR interweaves building,
+intervention, and evaluation.
 
-| Estágio | Princípios |
+| Stage | Principles |
 |---|---|
-| 1. Formulação do problema | P1 Pesquisa inspirada na prática — problemas de campo como oportunidades de criar conhecimento; P2 Artefato impregnado de teoria — teorias informam o artefato |
-| 2. Construção, intervenção e avaliação (BIE) | P3 Moldagem recíproca — artefato e contexto organizacional se influenciam; P4 Papéis mutuamente influentes — pesquisadores e praticantes aprendem uns com os outros; P5 Avaliação autêntica e concorrente — avaliação contínua, não etapa final |
-| 3. Reflexão e aprendizagem | P6 Emergência guiada — o artefato reflete o design inicial e a moldagem contínua pelo uso e pela avaliação |
-| 4. Formalização da aprendizagem | P7 Resultados generalizados — generalizar instância do problema para classe de problemas, instância da solução para classe de soluções e derivar princípios de design |
+| 1. Problem formulation | P1 Practice-inspired research — field problems as knowledge-creation opportunities; P2 Theory-ingrained artifact — theories inform the artifact |
+| 2. Building, intervention, and evaluation (BIE) | P3 Reciprocal shaping — artifact and organizational context shape each other; P4 Mutually influential roles — researchers and practitioners learn from each other; P5 Authentic and concurrent evaluation — ongoing evaluation, not a final stage |
+| 3. Reflection and learning | P6 Guided emergence — the artifact reflects the initial design and its continuous shaping by use and evaluation |
+| 4. Formalization of learning | P7 Generalized outcomes — generalize the problem instance to a class of problems and the solution instance to a class of solutions, and derive design principles |
 
-**Estágio 1 envolve:** conceber a oportunidade de pesquisa, formular questões iniciais, tratar o
-problema como instância de uma classe, identificar bases teóricas e avanços tecnológicos
-anteriores, garantir compromisso organizacional de longo prazo e definir papéis.
+**Stage 1 involves:** framing the research opportunity, formulating initial questions, casting the
+problem as an instance of a class, identifying theoretical bases and prior technology advances,
+securing long-term organizational commitment, and setting up roles.
 
-**Esquemas de BIE.**
-- *Dominado por TI*: inovação tecnológica; versão alfa com avaliação em contexto limitado,
-  versão beta em uso organizacional mais amplo.
-- *Dominado pela organização*: inovação principalmente na intervenção organizacional.
+**BIE schemas.**
+- *IT-dominant*: technological innovation; alpha version with evaluation in a limited context, beta
+  version in wider organizational use.
+- *Organization-dominant*: innovation mainly in the organizational intervention.
 
-**Quando usar.** O pesquisador tem acesso e papel ativo em uma organização, o artefato só faz
-sentido em uso, e praticantes participam do design. **Quando evitar.** Artefatos puramente
-técnicos avaliados em laboratório; nesse caso, ADR vira rótulo.
+**When to use.** The researcher has access to and an active role in an organization, the artifact
+only makes sense in use, and practitioners take part in design. **When to avoid.** Purely technical
+artifacts evaluated in the lab; there, ADR becomes a label.
 
-**Cuidados.** Documente intervenções (quem decidiu o quê, quando, com base em quê), gerencie o
-viés de quem é simultaneamente designer e avaliador e registre as mudanças no contexto.
+**Cautions.** Document interventions (who decided what, when, and on what basis), manage the bias of
+being both designer and evaluator, and record changes in the context.
 
 ### eADR (Mullarkey & Hevner, 2019)
-Elabora o ADR em quatro estágios — **diagnóstico, design, implementação e evolução** — cada um
-executando seu próprio ciclo ADR (formulação do problema e planejamento, criação do artefato,
-avaliação, reflexão e aprendizagem). Permite entrar no processo em qualquer estágio e reconhece
-que cada estágio pode gerar seus próprios artefatos e contribuições, por exemplo artefatos de
-diagnóstico do problema.
+Elaborates ADR into four stages — **diagnosis, design, implementation, and evolution** — each running
+its own ADR cycle (problem formulation and planning, artifact creation, evaluation, reflection and
+learning). It allows entering the process at any stage and recognizes that each stage can produce
+its own artifacts and contributions, for example problem-diagnosis artifacts.
 
 ---
 
 ## 8. Dresch, Lacerda & Antunes Jr. (2015)
 
-Referência muito usada no Brasil, especialmente em engenharia de produção e gestão (há edição em
-português pela Bookman, 2015; ver também Lacerda et al., 2013).
+Widely used in Brazil, especially in production engineering and management (a Portuguese edition was
+published by Bookman in 2015; see also Lacerda et al., 2013).
 
-**Etapas do método:**
-1. Identificação do problema
-2. Conscientização do problema
-3. Revisão sistemática da literatura
-4. Identificação dos artefatos e configuração das classes de problemas
-5. Proposição de artefatos para resolver o problema específico
-6. Projeto do artefato selecionado
-7. Desenvolvimento do artefato
-8. Avaliação do artefato
-9. Explicitação das aprendizagens
-10. Conclusões
-11. Generalização para uma classe de problemas
-12. Comunicação dos resultados
+**Method steps:**
+1. Problem identification
+2. Problem awareness
+3. Systematic literature review
+4. Identification of artifacts and configuration of classes of problems
+5. Proposal of artifacts to solve the specific problem
+6. Design of the selected artifact
+7. Development of the artifact
+8. Evaluation of the artifact
+9. Explicitation of learnings
+10. Conclusions
+11. Generalization to a class of problems
+12. Communication of results
 
-**Conceitos centrais.**
-- **Classe de problemas:** organização de um conjunto de problemas, práticos ou teóricos, que
-  contém artefatos úteis para a ação. Configurá-la cedo (etapa 4) orienta a revisão de literatura
-  e a generalização (etapa 11).
-- A revisão sistemática aparece como etapa explícita, o que reforça o ciclo de rigor.
-- Aprendizagens e generalização são etapas próprias, não apêndices da avaliação.
+**Core concepts.**
+- **Class of problems:** an organization of a set of problems, practical or theoretical, that
+  contains artifacts useful for action. Configuring it early (step 4) guides the literature review
+  and the generalization (step 11).
+- The systematic review appears as an explicit step, reinforcing the rigor cycle.
+- Learnings and generalization are steps in their own right, not appendices to the evaluation.
 
-**Quando usar.** Bancas brasileiras de engenharia de produção, administração e áreas afins que
-conhecem o método; projetos que precisam de revisão sistemática formal. Pode ser combinado com
-FEDS para detalhar a avaliação.
+**When to use.** Committees in production engineering, management, and related fields that know the
+method; projects that need a formal systematic review. It can be combined with FEDS to detail the
+evaluation.
 
 ---
 
-## 9. Duas estratégias de DSR (Iivari, 2015)
+## 9. Two DSR strategies (Iivari, 2015)
 
-| | Estratégia 1 | Estratégia 2 |
+| | Strategy 1 | Strategy 2 |
 |---|---|---|
-| Ponto de partida | Conceito de solução geral (meta-artefato) para uma classe de problemas | Problema específico de um cliente |
-| Movimento | Do geral para instâncias: construir o meta-artefato, instanciar e avaliar | Do específico para o geral: construir artefato concreto em contexto e depois destilar conhecimento prescritivo |
-| Proximidade | DSR "clássico" de laboratório e campo | ADR e pesquisa-ação |
-| Desafio de generalização | Mostrar que funciona em contextos reais variados | Mostrar que o aprendizado vale além do cliente |
+| Starting point | General solution concept (meta-artifact) for a class of problems | A specific client problem |
+| Movement | From general to instances: build the meta-artifact, instantiate, and evaluate | From specific to general: build a concrete artifact in context, then distill prescriptive knowledge |
+| Closest to | "Classic" lab and field DSR | ADR and action research |
+| Generalization challenge | Show that it works in varied real contexts | Show that the learning holds beyond the client |
 
-Declarar a estratégia ajuda a justificar o desenho de avaliação e as afirmações de
-generalidade.
-
----
-
-## 10. DSR em engenharia de software e computação
-
-**Par problema–solução e regra tecnológica.** Runeson et al. (2020) e Engström et al. (2020)
-enquadram pesquisa em engenharia de software como DSR: uma instância de problema e uma instância
-de solução, ligadas por três atividades — conceituação do problema, projeto da solução e
-validação empírica — e uma **regra tecnológica** como contribuição generalizável:
-> Para alcançar <efeito> em <situação>, aplique <intervenção>.
-
-**Visual abstract (Storey et al., 2017).** Um quadro de uma página com a regra tecnológica, as
-três atividades e a avaliação do estudo em três lentes: **relevância** (a regra importa para
-praticantes?), **rigor** (a validação sustenta a regra?) e **novidade** (a regra é nova?).
-Engström et al. (2020) usaram essas lentes para analisar artigos de engenharia de software.
-
-**Computação e segurança.** Artigos de sistemas, redes e segurança costumam seguir a lógica DSR
-sem o nome: motivação e modelo de ameaça (problema), objetivos de projeto (requisitos),
-arquitetura e protocolo (artefato), análise de segurança ou provas (avaliação analítica),
-implementação (instanciação), benchmarks contra baselines (avaliação experimental). Ver
-`writing-and-reviewing.md` §5 para o mapeamento de seções.
+Declaring the strategy helps justify the evaluation design and the generality claims.
 
 ---
 
-## 11. Como escolher e combinar
+## 10. DSR in software engineering and computer science
 
-| Situação | Processo recomendado | Por quê |
+**Problem–solution pair and technological rule.** Runeson et al. (2020) and Engström et al. (2020)
+frame software engineering research as DSR: a problem instance and a solution instance, linked by
+three activities — problem conceptualization, solution design, and empirical validation — and a
+**technological rule** as the generalizable contribution:
+> To achieve <effect> in <situation>, apply <intervention>.
+
+**Visual abstract (Storey et al., 2017).** A one-page summary with the technological rule, the three
+activities, and an assessment of the study through three lenses: **relevance** (does the rule matter
+to practitioners?), **rigor** (does the validation support the rule?), and **novelty** (is the rule
+new?). Engström et al. (2020) used these lenses to analyze software engineering papers.
+
+**Computer science and security.** Systems, networking, and security papers often follow the DSR
+logic without the name: motivation and threat model (problem), design goals (requirements),
+architecture and protocol (artifact), security analysis or proofs (analytical evaluation),
+implementation (instantiation), benchmarks against baselines (experimental evaluation). See
+`writing-and-reviewing.md` §5 for the section mapping.
+
+---
+
+## 11. How to choose and combine
+
+| Situation | Recommended process | Why |
 |---|---|---|
-| Artefato de TI ou SI, público de Sistemas de Informação | DSRM + três ciclos | Mais reconhecido; atividades claras; ciclos explicitam rigor e relevância |
-| Artefato construído dentro de uma organização, com intervenção do pesquisador | ADR ou eADR | Entrelaça construção, intervenção e avaliação em contexto real |
-| Engenharia de software ou sistemas; foco em validar antes de implantar | Wieringa | Separa problemas de design e questões de conhecimento; métodos de validação detalhados |
-| Ênfase em construir ou refinar teoria de design | Vaishnavi & Kuechler | Circunscrição e conclusão explicitam aprendizado teórico |
-| Engenharia de produção ou gestão no Brasil | Dresch et al. | Familiar a bancas; classe de problemas e revisão sistemática explícitas |
-| Computação ou segurança em venues que não usam "DSR" | Wieringa ou par problema–solução com regra tecnológica, no vocabulário da área | Rigor de DSR sem jargão estranho à comunidade |
-| Artefato longevo em ambiente volátil | Três ciclos + ciclo de mudança e impacto | Captura evolução e efeitos do artefato |
+| IT/IS artifact, Information Systems audience | DSRM + three cycles | Most recognized; clear activities; cycles make rigor and relevance explicit |
+| Artifact built inside an organization with researcher intervention | ADR or eADR | Interweaves building, intervention, and evaluation in a real context |
+| Software or systems engineering; focus on validating before deployment | Wieringa | Separates design problems from knowledge questions; detailed validation methods |
+| Emphasis on building or refining design theory | Vaishnavi & Kuechler | Circumscription and conclusion make theoretical learning explicit |
+| Production engineering or management in Brazil | Dresch et al. | Familiar to committees; explicit class of problems and systematic review |
+| Computer science or security venues that do not use "DSR" | Wieringa or problem–solution pair with a technological rule, in the field's vocabulary | DSR rigor without jargon foreign to the community |
+| Long-lived artifact in a volatile environment | Three cycles + change and impact cycle | Captures evolution and effects of the artifact |
 
-**Pilha coerente frequente:** DSRM para o processo, três ciclos para relevância e rigor, FEDS
-para a avaliação e matriz de Gregor & Hevner para a contribuição. Cada framework cumpre um papel
-distinto.
+**A frequent coherent stack:** DSRM for the process, the three cycles for relevance and rigor, FEDS
+for the evaluation, and the Gregor & Hevner framework for the contribution. Each framework plays a
+distinct role.
 
-**Evite a "salada de frameworks":** citar cinco modelos sem dizer que papel cada um cumpre no
-projeto. Para cada framework citado, a metodologia deve dizer *o que ele organiza* e *onde isso
-aparece* no trabalho.
+**Avoid "framework salad":** citing five models without saying what role each plays in the project.
+For every framework cited, the methodology should say *what it organizes* and *where that shows up*
+in the work.
 
-**Adaptações** são legítimas quando declaradas e justificadas (p. ex., "a atividade de
-demonstração foi incorporada ao primeiro episódio de avaliação porque…").
+**Adaptations** are legitimate when declared and justified (e.g., "the demonstration activity was
+merged into the first evaluation episode because…").
 
 ---
 
-## 12. Tabela de equivalências
+## 12. Crosswalk table
 
-Correspondência aproximada; os modelos não são isomórficos.
+Approximate correspondence; the models are not isomorphic.
 
-| DSRM (Peffers) | Ciclos (Hevner) | Vaishnavi & Kuechler | Wieringa | ADR (Sein et al.) | Dresch et al. |
+| DSRM (Peffers) | Cycles (Hevner) | Vaishnavi & Kuechler | Wieringa | ADR (Sein et al.) | Dresch et al. |
 |---|---|---|---|---|---|
-| 1 Problema e motivação | Relevância | Consciência do problema | Investigação do problema | Estágio 1 (P1) | 1–3 |
-| 2 Objetivos da solução | Relevância (requisitos) e rigor | Sugestão | Projeto do tratamento (requisitos) | Estágio 1 (P2) | 4–5 |
-| 3 Projeto e desenvolvimento | Design e rigor | Desenvolvimento | Projeto do tratamento | Estágio 2 (P3, P4) | 6–7 |
-| 4 Demonstração | Design | Desenvolvimento / avaliação | Validação do tratamento | Estágio 2 | 7–8 |
-| 5 Avaliação | Design (interna) e relevância (campo) | Avaliação | Validação; avaliação da implementação | Estágio 2 (P5) | 8 |
-| Retornos iterativos | Rigor (adições à base) | Circunscrição; conclusão | Novo ciclo | Estágio 3 (P6) | 9–11 |
-| 6 Comunicação | Rigor | Conclusão | — | Estágio 4 (P7) | 12 |
+| 1 Problem and motivation | Relevance | Awareness of problem | Problem investigation | Stage 1 (P1) | 1–3 |
+| 2 Objectives of a solution | Relevance (requirements) and rigor | Suggestion | Treatment design (requirements) | Stage 1 (P2) | 4–5 |
+| 3 Design and development | Design and rigor | Development | Treatment design | Stage 2 (P3, P4) | 6–7 |
+| 4 Demonstration | Design | Development / evaluation | Treatment validation | Stage 2 | 7–8 |
+| 5 Evaluation | Design (internal) and relevance (field) | Evaluation | Validation; implementation evaluation | Stage 2 (P5) | 8 |
+| Iterative loops | Rigor (additions to the knowledge base) | Circumscription; conclusion | New cycle | Stage 3 (P6) | 9–11 |
+| 6 Communication | Rigor | Conclusion | — | Stage 4 (P7) | 12 |
