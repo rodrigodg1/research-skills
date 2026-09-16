@@ -5,7 +5,7 @@
   },
   "metadata": {
     "description": "Claude skills for academic research: methodology, scientific writing, and review.",
-    "version": "1.1.0"
+    "version": "1.2.0"
   },
   "plugins": [
     {
@@ -27,6 +27,27 @@
       ],
       "skills": [
         "./skills/design-science-research"
+      ]
+    },
+    {
+      "name": "cs-phd-thesis-evaluation",
+      "description": "Expert examiner for computer science PhD theses: calibrated assessment against the doctoral standard, claims-to-evidence verification, subfield checklists, integrity checks, examiner and pre-defense reports, defense questions, corrections verification, and mock examinations across examination systems.",
+      "source": "./",
+      "strict": false,
+      "version": "1.0.0",
+      "category": "research",
+      "keywords": [
+        "PhD thesis",
+        "doctoral dissertation",
+        "thesis examination",
+        "examiner report",
+        "viva",
+        "defense",
+        "computer science",
+        "peer review"
+      ],
+      "skills": [
+        "./skills/cs-phd-thesis-evaluation"
       ]
     }
   ]
