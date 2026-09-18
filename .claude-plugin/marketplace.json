@@ -4,8 +4,8 @@
     "name": "rodrigodg1"
   },
   "metadata": {
-    "description": "Claude skills for academic research: methodology, scientific writing, and review.",
-    "version": "1.2.0"
+    "description": "Claude skills for academic research: methodology, scientific writing, examination, and OpenResearch autoresearch.",
+    "version": "1.3.0"
   },
   "plugins": [
     {
@@ -48,6 +48,261 @@
       ],
       "skills": [
         "./skills/cs-phd-thesis-evaluation"
+      ]
+    },
+    {
+      "name": "openresearch-cli",
+      "description": "Use the orx CLI to run local OpenResearch projects from a terminal — create experiment branches, launch and supervise compute, inspect logs and evidence, and manage the experiment tree.",
+      "source": "./",
+      "strict": false,
+      "version": "1.0.0",
+      "category": "research",
+      "keywords": [
+        "openresearch",
+        "orx",
+        "cli",
+        "autoresearch",
+        "ml research",
+        "experiment management"
+      ],
+      "skills": [
+        "./skills/openresearch-cli"
+      ]
+    },
+    {
+      "name": "orx-agent-delegation",
+      "description": "Delegate independent work to helper agent sessions with orx agent spawn: task selection, self-contained briefs, branch ownership, compute authorization, and concurrency constraints.",
+      "source": "./",
+      "strict": false,
+      "version": "1.0.0",
+      "category": "research",
+      "keywords": [
+        "openresearch",
+        "orx",
+        "agent delegation",
+        "subagents",
+        "parallel research",
+        "autoresearch"
+      ],
+      "skills": [
+        "./skills/orx-agent-delegation"
+      ]
+    },
+    {
+      "name": "orx-compute",
+      "description": "Launch and monitor experiment runs and route guidance for HF, Modal, Kubernetes, SSH, Slurm, Ray, OpenResearch, Tinker, and local backends with fixed run contracts.",
+      "source": "./",
+      "strict": false,
+      "version": "1.0.0",
+      "category": "research",
+      "keywords": [
+        "openresearch",
+        "orx",
+        "compute",
+        "gpu",
+        "slurm",
+        "kubernetes",
+        "modal",
+        "ray",
+        "ssh",
+        "huggingface"
+      ],
+      "skills": [
+        "./skills/orx-compute"
+      ]
+    },
+    {
+      "name": "orx-create",
+      "description": "Initialize an OpenResearch project with orx up and add experiment nodes with orx create-experiment for baselines, parent nodes, and run commands.",
+      "source": "./",
+      "strict": false,
+      "version": "1.0.0",
+      "category": "research",
+      "keywords": [
+        "openresearch",
+        "orx",
+        "project initialization",
+        "experiment creation",
+        "autoresearch"
+      ],
+      "skills": [
+        "./skills/orx-create"
+      ]
+    },
+    {
+      "name": "orx-customize",
+      "description": "Save reusable skills and LaTeX templates with orx skills add and orx templates add for use across OpenResearch projects.",
+      "source": "./",
+      "strict": false,
+      "version": "1.0.0",
+      "category": "research",
+      "keywords": [
+        "openresearch",
+        "orx",
+        "skills",
+        "templates",
+        "customization",
+        "latex templates"
+      ],
+      "skills": [
+        "./skills/orx-customize"
+      ]
+    },
+    {
+      "name": "orx-evidence",
+      "description": "Prepare and inspect experiment run evidence: design stdout metrics and summaries, read persisted results with orx logs, and validate run-derived claims.",
+      "source": "./",
+      "strict": false,
+      "version": "1.0.0",
+      "category": "research",
+      "keywords": [
+        "openresearch",
+        "orx",
+        "evidence",
+        "logs",
+        "metrics",
+        "validation",
+        "experiment results"
+      ],
+      "skills": [
+        "./skills/orx-evidence"
+      ]
+    },
+    {
+      "name": "orx-experiment-tree",
+      "description": "Plan and drive the experiment tree: first-launch setup, fixed run contract, frozen nodes, stacked-bush tree shape, branch/launch/wait/promote, and turn summaries.",
+      "source": "./",
+      "strict": false,
+      "version": "1.0.0",
+      "category": "research",
+      "keywords": [
+        "openresearch",
+        "orx",
+        "experiment tree",
+        "hypothesis testing",
+        "autoresearch",
+        "reproducibility"
+      ],
+      "skills": [
+        "./skills/orx-experiment-tree"
+      ]
+    },
+    {
+      "name": "orx-figures",
+      "description": "Publication-quality figures in matplotlib or TikZ: learning curves, scaling laws, benchmark and ablation comparisons, Pareto trade-offs, heatmaps, and method diagrams.",
+      "source": "./",
+      "strict": false,
+      "version": "1.0.0",
+      "category": "research",
+      "keywords": [
+        "openresearch",
+        "orx",
+        "figures",
+        "matplotlib",
+        "tikz",
+        "plotting",
+        "scientific visualization",
+        "latex"
+      ],
+      "skills": [
+        "./skills/orx-figures"
+      ]
+    },
+    {
+      "name": "orx-git",
+      "description": "Read, edit, commit, and diff experiment code; coordinate shared worktrees and preserve frozen branch history across OpenResearch experiment nodes.",
+      "source": "./",
+      "strict": false,
+      "version": "1.0.0",
+      "category": "research",
+      "keywords": [
+        "openresearch",
+        "orx",
+        "git",
+        "worktrees",
+        "version control",
+        "reproducible experiments"
+      ],
+      "skills": [
+        "./skills/orx-git"
+      ]
+    },
+    {
+      "name": "orx-instances",
+      "description": "Create standalone OpenResearch compute instances with orx instance create for persistent machines and manual or ad-hoc exploration.",
+      "source": "./",
+      "strict": false,
+      "version": "1.0.0",
+      "category": "research",
+      "keywords": [
+        "openresearch",
+        "orx",
+        "cloud instances",
+        "gpu compute",
+        "remote machines"
+      ],
+      "skills": [
+        "./skills/orx-instances"
+      ]
+    },
+    {
+      "name": "orx-lit-review",
+      "description": "Search and read research papers across alphaXiv, OpenAlex, and bioRxiv discovery primitives, rank combined candidates, and follow up on sources.",
+      "source": "./",
+      "strict": false,
+      "version": "1.0.0",
+      "category": "research",
+      "keywords": [
+        "openresearch",
+        "orx",
+        "literature review",
+        "alphaxiv",
+        "openalex",
+        "biorxiv",
+        "paper search",
+        "citations"
+      ],
+      "skills": [
+        "./skills/orx-lit-review"
+      ]
+    },
+    {
+      "name": "orx-paper",
+      "description": "Draft academic papers or preprints as LaTeX in the project working tree with live rendering, compilation checks, and grounding in experiment runs.",
+      "source": "./",
+      "strict": false,
+      "version": "1.0.0",
+      "category": "research",
+      "keywords": [
+        "openresearch",
+        "orx",
+        "latex",
+        "paper drafting",
+        "preprint",
+        "academic writing",
+        "manuscript"
+      ],
+      "skills": [
+        "./skills/orx-paper"
+      ]
+    },
+    {
+      "name": "orx-reports",
+      "description": "Write and organize durable research outputs in the artifacts directory, including reports, summaries, comparisons, figures, and exported data.",
+      "source": "./",
+      "strict": false,
+      "version": "1.0.0",
+      "category": "research",
+      "keywords": [
+        "openresearch",
+        "orx",
+        "reports",
+        "artifacts",
+        "summaries",
+        "research documentation"
+      ],
+      "skills": [
+        "./skills/orx-reports"
       ]
     }
   ]
